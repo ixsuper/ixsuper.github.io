@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ixsuper - App Developer</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f1128 0%, #1a3a7a 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        .container { max-width: 600px; text-align: center; }
+        .logo { font-size: 64px; margin-bottom: 16px; }
+        h1 { font-size: 2.2em; font-weight: 800; margin-bottom: 8px; }
+        .subtitle { font-size: 1.1em; color: rgba(255,255,255,0.7); margin-bottom: 40px; }
+        .app-card {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 32px;
+            margin-bottom: 24px;
+            backdrop-filter: blur(10px);
+        }
+        .app-card h2 { font-size: 1.5em; margin-bottom: 8px; }
+        .app-card p { color: rgba(255,255,255,0.75); margin-bottom: 20px; }
+        .btn {
+            display: inline-block;
+            background: #3478f6;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1em;
+            transition: transform 0.2s;
+        }
+        .btn:hover { transform: scale(1.05); }
+        .links {
+            margin-top: 40px;
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .links a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        .links a:hover { color: #fff; }
+        footer { margin-top: 60px; color: rgba(255,255,255,0.4); font-size: 0.85em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🎮</div>
+        <h1>ixsuper</h1>
+        <p class="subtitle">Mobile Game Developer</p>
+
+        <div class="app-card">
+            <h2>🔢 Color Number Match</h2>
+            <p>A fun and colorful number matching puzzle game. Match tiles by color, number, or both to clear the board!</p>
+            <a href="https://apps.apple.com/app/id6761441678" class="btn">Download on the App Store</a>
+        </div>
+
+        <div class="links">
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Use</a>
+            <a href="https://x.com/thesuper_hunter">X (Twitter)</a>
+            <a href="mailto:alsuhaymiziyad@gmail.com">Contact</a>
+        </div>
+
+        <footer>&copy; 2025 Ziyad Alsuhaymi. All rights reserved.</footer>
+    </div>
+</body>
+</html>
