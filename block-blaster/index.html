@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Blaster Puzzle - Free Block Puzzle Game</title>
+    <meta name="description" content="Block Blaster Puzzle - A satisfying block puzzle game with combos, power-ups, and beautiful sensory themes. Free on the App Store.">
+    <meta name="keywords" content="block puzzle, brain game, tetris, 1010, puzzle game, iOS game, block blaster">
+    <meta property="og:title" content="Block Blaster Puzzle">
+    <meta property="og:description" content="A satisfying block puzzle game with combos, power-ups, and beautiful sensory themes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ixsuper.github.io/block-blaster/">
+    <link rel="canonical" href="https://ixsuper.github.io/block-blaster/">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0a0a1a 0%, #1a0a3a 50%, #0a1a2a 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+        .container { max-width: 640px; text-align: center; width: 100%; }
+        .logo { font-size: 72px; margin-bottom: 12px; }
+        h1 { font-size: 2.4em; font-weight: 900; margin-bottom: 8px; background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .subtitle { font-size: 1.15em; color: rgba(255,255,255,0.65); margin-bottom: 36px; line-height: 1.5; }
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #3478f6, #5856d6);
+            color: #fff;
+            padding: 16px 40px;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.15em;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(52, 120, 246, 0.3);
+        }
+        .download-btn:hover { transform: scale(1.05); box-shadow: 0 6px 30px rgba(52, 120, 246, 0.5); }
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 40px 0;
+            text-align: left;
+        }
+        .feature {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+        }
+        .feature-icon { font-size: 1.8em; margin-bottom: 8px; }
+        .feature h3 { font-size: 1em; font-weight: 700; margin-bottom: 4px; }
+        .feature p { font-size: 0.85em; color: rgba(255,255,255,0.6); line-height: 1.4; }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 32px 0;
+        }
+        .stat-item { text-align: center; }
+        .stat-num { font-size: 1.8em; font-weight: 900; color: #4ecdc4; }
+        .stat-label { font-size: 0.8em; color: rgba(255,255,255,0.5); }
+        .links {
+            margin-top: 40px;
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .links a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.9em; }
+        .links a:hover { color: #fff; }
+        .other-games {
+            margin-top: 48px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .other-games h3 { font-size: 1em; color: rgba(255,255,255,0.4); margin-bottom: 12px; }
+        .other-games a { color: #3478f6; text-decoration: none; font-size: 0.95em; }
+        .other-games a:hover { text-decoration: underline; }
+        footer { margin-top: 48px; color: rgba(255,255,255,0.3); font-size: 0.8em; }
+        @media (max-width: 500px) { .features { grid-template-columns: 1fr; } .stats { gap: 24px; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🧩</div>
+        <h1>Block Blaster Puzzle</h1>
+        <p class="subtitle">A satisfying block puzzle game with explosive combos, beautiful sensory themes, and haptic feedback that makes every line clear feel incredible.</p>
+
+        <a href="https://apps.apple.com/app/block-blaster-puzzle/id0000000000" class="download-btn">Download Free on the App Store</a>
+
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">💥</div>
+                <h3>Explosive Combos</h3>
+                <p>Chain line clears for massive combo multipliers with screen shake and particle effects.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🎨</div>
+                <h3>Sensory Packs</h3>
+                <p>Wood tocks, crystal clinks, 8-bit beeps — each theme has its own custom audio.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">⚡</div>
+                <h3>Power-Ups</h3>
+                <p>Hammer, Reroll, Undo, and more. Use strategy to survive longer.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🌍</div>
+                <h3>7 Languages</h3>
+                <p>English, Arabic, Urdu, Turkish, French, Spanish, and Hindi. RTL supported.</p>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-num">10x10</div>
+                <div class="stat-label">Grid Size</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">5</div>
+                <div class="stat-label">Game Modes</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">20+</div>
+                <div class="stat-label">Achievements</div>
+            </div>
+        </div>
+
+        <div class="links">
+            <a href="/block-blaster/privacy">Privacy Policy</a>
+            <a href="/block-blaster/terms">Terms of Use</a>
+            <a href="/block-blaster/support">Support</a>
+            <a href="https://x.com/thesuper_hunter">X (Twitter)</a>
+            <a href="mailto:alsuhaymiziyad@gmail.com">Contact</a>
+        </div>
+
+        <div class="other-games">
+            <h3>More Games by ixsuper</h3>
+            <a href="/">🔢 Color Number Match</a>
+        </div>
+
+        <footer>&copy; 2025-2026 Ziyad Alsuhaymi. All rights reserved.</footer>
+    </div>
+</body>
+</html>
