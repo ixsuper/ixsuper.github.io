@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ixsuper - Mobile Game Developer</title>
-    <meta name="description" content="Mobile puzzle games by Ziyad Alsuhaymi. Play Color Number Match and Block Blaster Puzzle on the App Store.">
+    <title>ixsuper - iOS Developer</title>
+    <meta name="description" content="iOS apps and games by Ziyad Alsuhaymi. Echoes, Color Number Match, and Block Blaster Puzzle.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -29,23 +29,23 @@
             padding: 32px;
             margin-bottom: 24px;
             backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             text-align: center;
         }
         .app-card h2 { font-size: 1.5em; margin-bottom: 8px; }
-        .app-card p { color: rgba(255,255,255,0.75); margin-bottom: 20px; }
-        .app-card .app-links {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 16px;
+        .app-card p { color: rgba(255,255,255,0.75); margin-bottom: 20px; line-height: 1.5; }
+        .badge {
+            display: inline-block;
+            background: #2dd4bf;
+            color: #0f172a;
+            font-size: 0.7em;
+            font-weight: 800;
+            padding: 3px 10px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
         }
-        .app-card .app-links a {
-            color: rgba(255,255,255,0.5);
-            text-decoration: none;
-            font-size: 0.85em;
-        }
-        .app-card .app-links a:hover { color: #fff; }
         .btn {
             display: inline-block;
             background: #3478f6;
@@ -58,17 +58,20 @@
             transition: transform 0.2s;
         }
         .btn:hover { transform: scale(1.05); }
-        .btn-purple { background: linear-gradient(135deg, #5856d6, #8b5cf6); }
-        .badge {
-            display: inline-block;
-            background: rgba(78, 205, 196, 0.15);
-            color: #4ecdc4;
-            font-size: 0.75em;
-            font-weight: 700;
-            padding: 4px 10px;
-            border-radius: 8px;
-            margin-bottom: 12px;
+        .btn-teal { background: #2dd4bf; color: #0f172a; }
+        .app-links {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 14px;
         }
+        .app-links a {
+            color: rgba(255,255,255,0.55);
+            text-decoration: none;
+            font-size: 0.85em;
+        }
+        .app-links a:hover { color: #fff; }
         .links {
             margin-top: 40px;
             display: flex;
@@ -87,27 +90,27 @@
 </head>
 <body>
     <div class="container">
-        <div class="logo">🎮</div>
+        <div class="logo">&#x1F4F1;</div>
         <h1>ixsuper</h1>
-        <p class="subtitle">Mobile Game Developer</p>
+        <p class="subtitle">iOS Apps &amp; Games Developer</p>
 
-        <!-- Color Number Match -->
+        <!-- Echoes -->
         <div class="app-card">
-            <h2>🔢 Color Number Match</h2>
-            <p>A fun and colorful number matching puzzle game. Match tiles by color, number, or both to clear the board!</p>
-            <a href="https://apps.apple.com/app/id6761441678" class="btn">Download on the App Store</a>
+            <span class="badge">New</span>
+            <h2>&#x1F30D; Echoes: Echoes of the City</h2>
+            <p>Capture living memories with photo, ambient sound, weather, and location. Built for iOS 26 with Liquid Glass, on-device ML sound classification, and an immersive memory map. 11 languages.</p>
+            <span class="btn btn-teal" style="cursor: default; opacity: 0.85;">Coming Soon</span>
             <div class="app-links">
-                <a href="/privacy">Privacy Policy</a>
-                <a href="/terms">Terms of Use</a>
+                <a href="/echoes/privacy">Privacy Policy</a>
+                <a href="/echoes/terms">Terms of Use</a>
             </div>
         </div>
 
         <!-- Block Blaster Puzzle -->
         <div class="app-card">
-            <span class="badge">NEW</span>
-            <h2>🧩 Block Blaster Puzzle</h2>
+            <h2>&#x1F4A5; Block Blaster Puzzle</h2>
             <p>A satisfying block puzzle game with explosive combos, sensory themes, and haptic feedback. 10x10 grid, 5 game modes, 7 languages.</p>
-            <a href="https://apps.apple.com/app/block-blaster-puzzle/id0000000000" class="btn btn-purple">Download on the App Store</a>
+            <span class="btn" style="cursor: default; opacity: 0.85;">Coming Soon</span>
             <div class="app-links">
                 <a href="/block-blaster/">Learn More</a>
                 <a href="/block-blaster/privacy">Privacy Policy</a>
@@ -116,9 +119,20 @@
             </div>
         </div>
 
+        <!-- Color Number Match -->
+        <div class="app-card">
+            <h2>&#x1F522; Color Number Match</h2>
+            <p>A fun and colorful number matching puzzle game. Match tiles by color, number, or both to clear the board!</p>
+            <a href="https://apps.apple.com/app/id6761441678" class="btn">Download on the App Store</a>
+            <div class="app-links">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Use</a>
+            </div>
+        </div>
+
         <div class="links">
-            <a href="https://x.com/thesuper_hunter">X (Twitter)</a>
-            <a href="mailto:alsuhaymiziyad@gmail.com">Contact</a>
+            <a href="https://x.com/ixsuper">X (Twitter)</a>
+            <a href="mailto:contact@ixsuper.com">Contact</a>
         </div>
 
         <footer>&copy; 2025-2026 Ziyad Alsuhaymi. All rights reserved.</footer>
