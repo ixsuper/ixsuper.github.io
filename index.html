@@ -3,139 +3,428 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ixsuper - iOS Developer</title>
-    <meta name="description" content="iOS apps and games by Ziyad Alsuhaymi. Echoes, Color Number Match, and Block Blaster Puzzle.">
+    <title>ixsuper - iOS Apps & Games Developer</title>
+    <meta name="description" content="iOS apps and games by Ziyad Alsuhaymi (ixsuper). Echoes, Block Blaster Puzzle, and Color Number Match.">
+    <meta name="author" content="Ziyad Alsuhaymi">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="ixsuper - iOS Apps & Games Developer">
+    <meta property="og:description" content="iOS apps and games by Ziyad Alsuhaymi. Echoes, Block Blaster Puzzle, and Color Number Match.">
+    <meta property="og:url" content="https://ixsuper.github.io">
+    <meta property="og:type" content="website">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://ixsuper.github.io">
+
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #0f1128 0%, #1a3a7a 100%);
-            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(160deg, #0a0e27 0%, #111a45 40%, #162050 70%, #0d1333 100%);
+            color: #e8ecf4;
             min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Ambient glow effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: -40%;
+            left: -20%;
+            width: 80%;
+            height: 80%;
+            background: radial-gradient(ellipse, rgba(45, 90, 200, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        body::after {
+            content: '';
+            position: fixed;
+            bottom: -30%;
+            right: -20%;
+            width: 70%;
+            height: 70%;
+            background: radial-gradient(ellipse, rgba(45, 212, 191, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .page-wrapper {
+            position: relative;
+            z-index: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            padding: 40px 20px;
+            min-height: 100vh;
+            padding: 60px 20px 40px;
         }
-        .container { max-width: 600px; text-align: center; }
-        .logo { font-size: 64px; margin-bottom: 16px; }
-        h1 { font-size: 2.2em; font-weight: 800; margin-bottom: 8px; }
-        .subtitle { font-size: 1.1em; color: rgba(255,255,255,0.7); margin-bottom: 40px; }
-        .app-card {
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.15);
-            border-radius: 20px;
-            padding: 32px;
-            margin-bottom: 24px;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+
+        /* Header */
+        .header {
             text-align: center;
+            margin-bottom: 56px;
+            animation: fadeInDown 0.8s ease-out;
         }
-        .app-card h2 { font-size: 1.5em; margin-bottom: 8px; }
-        .app-card p { color: rgba(255,255,255,0.75); margin-bottom: 20px; line-height: 1.5; }
+
+        .header-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            display: inline-block;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .header h1 {
+            font-size: 2.8em;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #ffffff 0%, #94a3c8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .header .subtitle {
+            font-size: 1.15em;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 500;
+            letter-spacing: 0.3px;
+        }
+
+        /* App Cards Container */
+        .cards-container {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            max-width: 580px;
+            width: 100%;
+            margin-bottom: 48px;
+        }
+
+        /* App Card */
+        .app-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.03) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 36px 32px 28px;
+            text-align: center;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                        box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                        border-color 0.35s ease;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 0.7s ease-out both;
+        }
+
+        .app-card:nth-child(1) { animation-delay: 0.1s; }
+        .app-card:nth-child(2) { animation-delay: 0.25s; }
+        .app-card:nth-child(3) { animation-delay: 0.4s; }
+
+        .app-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+        }
+
+        .app-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 40px rgba(45, 90, 200, 0.08);
+            border-color: rgba(255, 255, 255, 0.18);
+        }
+
+        .app-card .app-emoji {
+            font-size: 44px;
+            display: block;
+            margin-bottom: 14px;
+        }
+
+        .app-card h2 {
+            font-size: 1.4em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.2px;
+        }
+
+        .app-card .description {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.95em;
+            line-height: 1.65;
+            margin-bottom: 22px;
+            max-width: 440px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Badges */
         .badge {
             display: inline-block;
-            background: #2dd4bf;
-            color: #0f172a;
-            font-size: 0.7em;
+            font-size: 0.65em;
             font-weight: 800;
-            padding: 3px 10px;
-            border-radius: 6px;
+            padding: 4px 12px;
+            border-radius: 8px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 10px;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
         }
+
+        .badge-new {
+            background: linear-gradient(135deg, #2dd4bf, #14b8a6);
+            color: #042f2e;
+        }
+
+        .badge-soon {
+            background: rgba(99, 130, 200, 0.25);
+            color: #93b0e0;
+            border: 1px solid rgba(99, 130, 200, 0.3);
+        }
+
+        /* Buttons */
         .btn {
             display: inline-block;
-            background: #3478f6;
-            color: #fff;
-            padding: 12px 28px;
-            border-radius: 12px;
+            padding: 13px 32px;
+            border-radius: 14px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 1em;
-            transition: transform 0.2s;
+            font-size: 0.95em;
+            transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+                        box-shadow 0.25s ease,
+                        opacity 0.25s ease;
+            cursor: pointer;
         }
-        .btn:hover { transform: scale(1.05); }
-        .btn-teal { background: #2dd4bf; color: #0f172a; }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #3478f6, #2563eb);
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(52, 120, 246, 0.3);
+        }
+        .btn-primary:hover {
+            box-shadow: 0 8px 30px rgba(52, 120, 246, 0.4);
+        }
+
+        .btn-teal {
+            background: linear-gradient(135deg, #2dd4bf, #14b8a6);
+            color: #042f2e;
+            cursor: default;
+            opacity: 0.85;
+        }
+        .btn-teal:hover {
+            transform: none;
+        }
+
+        .btn-muted {
+            background: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            cursor: default;
+        }
+        .btn-muted:hover {
+            transform: none;
+        }
+
+        /* App Links */
         .app-links {
             display: flex;
-            gap: 16px;
+            gap: 8px;
             justify-content: center;
             flex-wrap: wrap;
-            margin-top: 14px;
+            margin-top: 18px;
         }
+
         .app-links a {
-            color: rgba(255,255,255,0.55);
+            color: rgba(255, 255, 255, 0.4);
             text-decoration: none;
-            font-size: 0.85em;
+            font-size: 0.8em;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: color 0.2s ease, background 0.2s ease;
         }
-        .app-links a:hover { color: #fff; }
-        .links {
-            margin-top: 40px;
+
+        .app-links a:hover {
+            color: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .app-links .separator {
+            color: rgba(255, 255, 255, 0.15);
+            font-size: 0.8em;
+            line-height: 2;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            animation: fadeInUp 0.7s ease-out 0.55s both;
+        }
+
+        .footer-links {
             display: flex;
-            gap: 24px;
+            gap: 28px;
             justify-content: center;
-            flex-wrap: wrap;
+            margin-bottom: 24px;
         }
-        .links a {
-            color: rgba(255,255,255,0.6);
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.45);
             text-decoration: none;
             font-size: 0.9em;
+            font-weight: 500;
+            transition: color 0.25s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
-        .links a:hover { color: #fff; }
-        footer { margin-top: 60px; color: rgba(255,255,255,0.4); font-size: 0.85em; }
+
+        .footer-links a:hover {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .footer-links a svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        .copyright {
+            color: rgba(255, 255, 255, 0.25);
+            font-size: 0.8em;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .page-wrapper {
+                padding: 40px 16px 32px;
+            }
+            .header h1 {
+                font-size: 2.2em;
+            }
+            .app-card {
+                padding: 28px 22px 24px;
+                border-radius: 20px;
+            }
+            .app-card h2 {
+                font-size: 1.2em;
+            }
+            .footer-links {
+                gap: 20px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">&#x1F4F1;</div>
-        <h1>ixsuper</h1>
-        <p class="subtitle">iOS Apps &amp; Games Developer</p>
+    <div class="page-wrapper">
 
-        <!-- Echoes -->
-        <div class="app-card">
-            <span class="badge">New</span>
-            <h2>&#x1F30D; Echoes: Echoes of the City</h2>
-            <p>Capture living memories with photo, ambient sound, weather, and location. Built for iOS 26 with Liquid Glass, on-device ML sound classification, and an immersive memory map. 11 languages.</p>
-            <span class="btn btn-teal" style="cursor: default; opacity: 0.85;">Coming Soon</span>
-            <div class="app-links">
-                <a href="/echoes/privacy">Privacy Policy</a>
-                <a href="/echoes/terms">Terms of Use</a>
+        <!-- Header -->
+        <header class="header">
+            <span class="header-icon" aria-hidden="true">&#x1F4F1;</span>
+            <h1>ixsuper</h1>
+            <p class="subtitle">iOS Apps &amp; Games Developer</p>
+        </header>
+
+        <!-- App Cards -->
+        <main class="cards-container">
+
+            <!-- Echoes -->
+            <article class="app-card">
+                <span class="badge badge-new">New</span>
+                <span class="app-emoji" aria-hidden="true">&#x1F30D;</span>
+                <h2>Echoes: Echoes of the City</h2>
+                <p class="description">Capture living memories with photo, ambient sound, weather, and location. Built for iOS 26 with Liquid Glass, on-device ML, and an immersive memory map. 11 languages.</p>
+                <span class="btn btn-teal">Coming Soon</span>
+                <div class="app-links">
+                    <a href="/echoes/privacy">Privacy Policy</a>
+                    <span class="separator">&middot;</span>
+                    <a href="/echoes/terms">Terms of Use</a>
+                </div>
+            </article>
+
+            <!-- Block Blaster Puzzle -->
+            <article class="app-card">
+                <span class="badge badge-soon">Coming Soon</span>
+                <span class="app-emoji" aria-hidden="true">&#x1F4A5;</span>
+                <h2>Block Blaster Puzzle</h2>
+                <p class="description">A satisfying block puzzle game with explosive combos, sensory themes, and haptic feedback. 10x10 grid, 5 game modes, 7 languages.</p>
+                <span class="btn btn-muted">Coming Soon</span>
+                <div class="app-links">
+                    <a href="/block-blaster/">Learn More</a>
+                    <span class="separator">&middot;</span>
+                    <a href="/block-blaster/privacy">Privacy Policy</a>
+                    <span class="separator">&middot;</span>
+                    <a href="/block-blaster/terms">Terms of Use</a>
+                    <span class="separator">&middot;</span>
+                    <a href="/block-blaster/support">Support</a>
+                </div>
+            </article>
+
+            <!-- Color Number Match -->
+            <article class="app-card">
+                <span class="app-emoji" aria-hidden="true">&#x1F522;</span>
+                <h2>Color Number Match</h2>
+                <p class="description">A fun and colorful number matching puzzle game. Match tiles by color, number, or both to clear the board!</p>
+                <a href="https://apps.apple.com/app/id6761441678" class="btn btn-primary">Download on the App Store</a>
+                <div class="app-links">
+                    <a href="/privacy">Privacy Policy</a>
+                    <span class="separator">&middot;</span>
+                    <a href="/terms">Terms of Use</a>
+                </div>
+            </article>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="https://x.com/ixsuper">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    X (Twitter)
+                </a>
+                <a href="mailto:contact@ixsuper.com">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    Contact
+                </a>
             </div>
-        </div>
+            <p class="copyright">&copy; 2025-2026 Ziyad Alsuhaymi. All rights reserved.</p>
+        </footer>
 
-        <!-- Block Blaster Puzzle -->
-        <div class="app-card">
-            <h2>&#x1F4A5; Block Blaster Puzzle</h2>
-            <p>A satisfying block puzzle game with explosive combos, sensory themes, and haptic feedback. 10x10 grid, 5 game modes, 7 languages.</p>
-            <span class="btn" style="cursor: default; opacity: 0.85;">Coming Soon</span>
-            <div class="app-links">
-                <a href="/block-blaster/">Learn More</a>
-                <a href="/block-blaster/privacy">Privacy Policy</a>
-                <a href="/block-blaster/terms">Terms of Use</a>
-                <a href="/block-blaster/support">Support</a>
-            </div>
-        </div>
-
-        <!-- Color Number Match -->
-        <div class="app-card">
-            <h2>&#x1F522; Color Number Match</h2>
-            <p>A fun and colorful number matching puzzle game. Match tiles by color, number, or both to clear the board!</p>
-            <a href="https://apps.apple.com/app/id6761441678" class="btn">Download on the App Store</a>
-            <div class="app-links">
-                <a href="/privacy">Privacy Policy</a>
-                <a href="/terms">Terms of Use</a>
-            </div>
-        </div>
-
-        <div class="links">
-            <a href="https://x.com/ixsuper">X (Twitter)</a>
-            <a href="mailto:contact@ixsuper.com">Contact</a>
-        </div>
-
-        <footer>&copy; 2025-2026 Ziyad Alsuhaymi. All rights reserved.</footer>
     </div>
 </body>
 </html>
