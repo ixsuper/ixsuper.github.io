@@ -1,6 +1,6 @@
 # ixsuper.github.io
 
-Personal portfolio and app landing pages for iOS developer **ixsuper** (Ziyad Alsuhaymi).
+Personal portfolio and app landing pages for iOS developer **Ziyad Alsuhaymi**.
 
 **Live site:** [https://ixsuper.github.io](https://ixsuper.github.io)
 

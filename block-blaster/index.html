@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Block Blaster Puzzle - Free Block Puzzle Game</title>
-    <meta name="description" content="Block Blaster Puzzle - A satisfying block puzzle game with combos, power-ups, and beautiful sensory themes. Free on the App Store.">
+    <title>Block Blaster Puzzle — Coming Soon</title>
+    <meta name="description" content="Block Blaster Puzzle — a satisfying block puzzle game with combos, power-ups, and beautiful sensory themes. Coming soon to the App Store.">
     <meta name="keywords" content="block puzzle, brain game, tetris, 1010, puzzle game, iOS game, block blaster">
     <meta property="og:title" content="Block Blaster Puzzle">
     <meta property="og:description" content="A satisfying block puzzle game with combos, power-ups, and beautiful sensory themes.">
@@ -24,6 +24,9 @@
             padding: 40px 20px;
         }
         .container { max-width: 640px; text-align: center; width: 100%; }
+        .nav { margin-bottom: 32px; text-align: left; }
+        .nav a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.9em; font-weight: 500; }
+        .nav a:hover { color: #fff; }
         .logo { font-size: 72px; margin-bottom: 12px; }
         h1 { font-size: 2.4em; font-weight: 900; margin-bottom: 8px; background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .subtitle { font-size: 1.15em; color: rgba(255,255,255,0.65); margin-bottom: 36px; line-height: 1.5; }
@@ -40,6 +43,20 @@
             box-shadow: 0 4px 20px rgba(52, 120, 246, 0.3);
         }
         .download-btn:hover { transform: scale(1.05); box-shadow: 0 6px 30px rgba(52, 120, 246, 0.5); }
+        .coming-soon-btn {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.06);
+            color: rgba(255, 255, 255, 0.85);
+            padding: 16px 40px;
+            border-radius: 16px;
+            font-weight: 800;
+            font-size: 1.05em;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            cursor: default;
+            letter-spacing: 0.4px;
+        }
         .features {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -81,7 +98,8 @@
             border-top: 1px solid rgba(255,255,255,0.1);
         }
         .other-games h3 { font-size: 1em; color: rgba(255,255,255,0.4); margin-bottom: 12px; }
-        .other-games a { color: #3478f6; text-decoration: none; font-size: 0.95em; }
+        .other-games-list { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+        .other-games a { color: #3478f6; text-decoration: none; font-size: 0.95em; font-weight: 500; }
         .other-games a:hover { text-decoration: underline; }
         footer { margin-top: 48px; color: rgba(255,255,255,0.3); font-size: 0.8em; }
         @media (max-width: 500px) { .features { grid-template-columns: 1fr; } .stats { gap: 24px; } }
@@ -89,11 +107,13 @@
 </head>
 <body>
     <div class="container">
+        <div class="nav"><a href="/">&larr; Ziyad Alsuhaymi</a></div>
+
         <div class="logo">🧩</div>
         <h1>Block Blaster Puzzle</h1>
         <p class="subtitle">A satisfying block puzzle game with explosive combos, beautiful sensory themes, and haptic feedback that makes every line clear feel incredible.</p>
 
-        <a href="https://apps.apple.com/app/block-blaster-puzzle/id0000000000" class="download-btn">Download Free on the App Store</a>
+        <span class="coming-soon-btn">Coming Soon to the App Store</span>
 
         <div class="features">
             <div class="feature">
@@ -142,8 +162,11 @@
         </div>
 
         <div class="other-games">
-            <h3>More Games by ixsuper</h3>
-            <a href="/">🔢 Color Number Match</a>
+            <h3>More from Ziyad Alsuhaymi</h3>
+            <div class="other-games-list">
+                <a href="/colornumbermatch/">🔢 Color Number Match</a>
+                <a href="/echoes/">🌍 Echoes</a>
+            </div>
         </div>
 
         <footer>&copy; 2025-2026 Ziyad Alsuhaymi. All rights reserved.</footer>
