@@ -3,330 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Number Match - Colorful Puzzle Game for iOS</title>
-    <meta name="description" content="Color Number Match - A vibrant puzzle game with 2000+ levels, special tiles, 24 languages, and Game Center leaderboards. Free on the App Store.">
-    <meta name="keywords" content="color match, number match, puzzle game, iOS game, tile matching, brain game">
-    <meta property="og:title" content="Color Number Match">
-    <meta property="og:description" content="Match Colors & Numbers! 2000+ levels, special tiles, 24 languages. Free on the App Store.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ixsuper.github.io/colornumbermatch/">
-    <link rel="canonical" href="https://ixsuper.github.io/colornumbermatch/">
-    <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(160deg, #1a0a2e 0%, #2d1454 30%, #1a1050 60%, #0d0f30 100%);
-            color: #e8ecf4;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        body::before {
-            content: '';
-            position: fixed;
-            top: -40%;
-            left: -20%;
-            width: 80%;
-            height: 80%;
-            background: radial-gradient(ellipse, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
-            pointer-events: none;
-            z-index: 0;
-        }
-        body::after {
-            content: '';
-            position: fixed;
-            bottom: -30%;
-            right: -20%;
-            width: 70%;
-            height: 70%;
-            background: radial-gradient(ellipse, rgba(236, 72, 153, 0.07) 0%, transparent 70%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .page-wrapper {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
-            padding: 0 20px 40px;
-        }
-
-        /* Navigation */
-        .nav {
-            width: 100%;
-            max-width: 900px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 24px 0;
-            margin-bottom: 20px;
-        }
-
-        .nav-brand {
-            color: rgba(255, 255, 255, 0.6);
-            text-decoration: none;
-            font-size: 0.9em;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            transition: color 0.2s ease;
-        }
-        .nav-brand:hover { color: rgba(255, 255, 255, 0.9); }
-
-        .nav-links {
-            display: flex;
-            gap: 20px;
-        }
-        .nav-links a {
-            color: rgba(255, 255, 255, 0.5);
-            text-decoration: none;
-            font-size: 0.85em;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-        .nav-links a:hover { color: rgba(255, 255, 255, 0.9); }
-
-        /* Hero */
-        .hero {
-            text-align: center;
-            margin-bottom: 56px;
-            animation: fadeInDown 0.8s ease-out;
-        }
-
-        .hero-icon {
-            font-size: 80px;
-            display: inline-block;
-            margin-bottom: 16px;
-            animation: float 4s ease-in-out infinite;
-        }
-
-        .hero h1 {
-            font-size: 2.8em;
-            font-weight: 900;
-            letter-spacing: -0.5px;
-            background: linear-gradient(135deg, #f472b6 0%, #a78bfa 50%, #60a5fa 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 12px;
-        }
-
-        .hero .tagline {
-            font-size: 1.3em;
-            color: rgba(255, 255, 255, 0.6);
-            font-weight: 500;
-            margin-bottom: 28px;
-        }
-
-        .download-btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #ec4899, #8b5cf6);
-            color: #fff;
-            padding: 16px 40px;
-            border-radius: 16px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 1.1em;
-            transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease;
-            box-shadow: 0 4px 24px rgba(236, 72, 153, 0.3);
-        }
-        .download-btn:hover {
-            transform: translateY(-2px) scale(1.02);
-            box-shadow: 0 8px 36px rgba(236, 72, 153, 0.45);
-        }
-
-        /* Stats Row */
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 48px;
-            margin-bottom: 56px;
-            animation: fadeInUp 0.7s ease-out 0.2s both;
-        }
-        .stat-item { text-align: center; }
-        .stat-num {
-            font-size: 2em;
-            font-weight: 900;
-            background: linear-gradient(135deg, #f472b6, #a78bfa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .stat-label { font-size: 0.8em; color: rgba(255, 255, 255, 0.45); margin-top: 2px; }
-
-        /* Features */
-        .section-title {
-            font-size: 1.6em;
-            font-weight: 800;
-            text-align: center;
-            margin-bottom: 32px;
-            color: #fff;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-            max-width: 640px;
-            width: 100%;
-            margin-bottom: 56px;
-            animation: fadeInUp 0.7s ease-out 0.35s both;
-        }
-
-        .feature {
-            background: linear-gradient(145deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.03) 100%);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 22px 20px;
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-        .feature:hover {
-            transform: translateY(-2px);
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .feature-icon { font-size: 1.8em; margin-bottom: 8px; }
-        .feature h3 { font-size: 1em; font-weight: 700; margin-bottom: 4px; }
-        .feature p { font-size: 0.85em; color: rgba(255, 255, 255, 0.55); line-height: 1.5; }
-
-        /* What's New */
-        .whats-new {
-            max-width: 640px;
-            width: 100%;
-            margin-bottom: 56px;
-            animation: fadeInUp 0.7s ease-out 0.5s both;
-        }
-
-        .whats-new-card {
-            background: linear-gradient(145deg, rgba(168, 85, 247, 0.12) 0%, rgba(236, 72, 153, 0.06) 100%);
-            border: 1px solid rgba(168, 85, 247, 0.2);
-            border-radius: 20px;
-            padding: 28px 28px 24px;
-        }
-
-        .whats-new-card .version-badge {
-            display: inline-block;
-            font-size: 0.7em;
-            font-weight: 800;
-            padding: 4px 14px;
-            border-radius: 8px;
-            background: linear-gradient(135deg, #a78bfa, #8b5cf6);
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 14px;
-        }
-
-        .whats-new-card h3 {
-            font-size: 1.2em;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-
-        .whats-new-card ul {
-            list-style: none;
-            padding: 0;
-        }
-        .whats-new-card ul li {
-            color: rgba(255, 255, 255, 0.65);
-            font-size: 0.9em;
-            line-height: 1.7;
-            padding-left: 20px;
-            position: relative;
-        }
-        .whats-new-card ul li::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 10px;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #f472b6, #a78bfa);
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            max-width: 640px;
-            width: 100%;
-            padding-top: 32px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-            animation: fadeInUp 0.7s ease-out 0.6s both;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 24px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
-        }
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.45);
-            text-decoration: none;
-            font-size: 0.9em;
-            font-weight: 500;
-            transition: color 0.2s ease;
-        }
-        .footer-links a:hover { color: rgba(255, 255, 255, 0.9); }
-
-        .other-games {
-            margin-bottom: 24px;
-        }
-        .other-games span {
-            font-size: 0.85em;
-            color: rgba(255, 255, 255, 0.3);
-        }
-        .other-games a {
-            color: rgba(255, 255, 255, 0.5);
-            text-decoration: none;
-            font-size: 0.85em;
-            margin: 0 8px;
-            transition: color 0.2s ease;
-        }
-        .other-games a:hover { color: rgba(255, 255, 255, 0.9); }
-
-        .copyright {
-            color: rgba(255, 255, 255, 0.2);
-            font-size: 0.8em;
-        }
-
-        /* Animations */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(24px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-        }
-
-        /* Responsive */
-        @media (max-width: 640px) {
-            .page-wrapper { padding: 0 16px 32px; }
-            .hero h1 { font-size: 2.1em; }
-            .hero .tagline { font-size: 1.1em; }
-            .hero-icon { font-size: 60px; }
-            .features { grid-template-columns: 1fr; }
-            .stats { gap: 28px; }
-            .stat-num { font-size: 1.6em; }
-            .nav-links { gap: 14px; }
-            .whats-new-card { padding: 22px 20px 20px; }
-        }
-    </style>
-    <meta name="theme-color" content="#070a1a" media="(prefers-color-scheme: dark)">
+    <title>Color Number Match — Colorful Puzzle Game for iOS</title>
+    <meta name="description" content="Color Number Match — a vibrant puzzle game with 2000+ levels, special tiles, 24 languages, and Game Center leaderboards. Free on the App Store.">
+    <meta name="keywords" content="puzzle game, match game, color matching, number matching, iOS puzzle, color number match">
+    <meta name="author" content="Ziyad Alsuhaymi">
+    <meta name="theme-color" content="#0f1128" media="(prefers-color-scheme: dark)">
     <meta name="theme-color" content="#f5f6ff" media="(prefers-color-scheme: light)">
     <meta name="color-scheme" content="dark light">
 
@@ -338,12 +19,12 @@
     <link rel="manifest" href="/site.webmanifest">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Color Number Match - Colorful Puzzle Game for iOS">
-    <meta property="og:description" content="Color Number Match - A vibrant puzzle game with 2000+ levels, special tiles, 24 languages, and Game Center leaderboards. Free on the App Store.">
-    <meta property="og:url" content="https://ixsuper.github.io/colornumbermatch/">
+    <meta property="og:title" content="Color Number Match">
+    <meta property="og:description" content="Match Colors &amp; Numbers! 2000+ levels, special tiles, 24 languages. Free on the App Store.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ixsuper.github.io/colornumbermatch/">
     <meta property="og:site_name" content="Ziyad Alsuhaymi">
-    <meta property="og:image" content="https://ixsuper.github.io/assets/color-number-match-social.jpg">
+    <meta property="og:image" content="https://ixsuper.github.io/assets/color-number-match-hero.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="1200">
 
@@ -351,35 +32,57 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@thesuper_hunter">
     <meta name="twitter:creator" content="@thesuper_hunter">
-    <meta name="twitter:title" content="Color Number Match - Colorful Puzzle Game for iOS">
-    <meta name="twitter:description" content="Color Number Match - A vibrant puzzle game with 2000+ levels, special tiles, 24 languages, and Game Center leaderboards. Free on the App Store.">
-    <meta name="twitter:image" content="https://ixsuper.github.io/assets/color-number-match-social.jpg">
+    <meta name="twitter:title" content="Color Number Match">
+    <meta name="twitter:description" content="A vibrant puzzle game with 2000+ levels, special tiles, and 24 languages.">
+    <meta name="twitter:image" content="https://ixsuper.github.io/assets/color-number-match-hero.jpg">
 
     <link rel="canonical" href="https://ixsuper.github.io/colornumbermatch/">
+    <link rel="preload" as="image" href="/assets/color-number-match-hero.webp" type="image/webp" fetchpriority="high">
+
+    <link rel="stylesheet" href="/assets/app.css">
+    <style>
+        :root {
+            --accent-1: #8b5cf6;
+            --accent-2: #ec4899;
+            --accent-3: #38bdf8;
+        }
+    </style>
 </head>
 <body>
-    <div class="page-wrapper">
+    <div class="bg-stage" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
 
-        <!-- Navigation -->
+    <div class="container">
         <nav class="nav">
-            <a href="/" class="nav-brand">&larr; Ziyad Alsuhaymi</a>
-            <div class="nav-links">
-                <a href="/colornumbermatch/support">Support</a>
-                <a href="/privacy">Privacy</a>
-                <a href="/terms">Terms</a>
-            </div>
+            <a href="/">&larr; Ziyad Alsuhaymi</a>
+            <a href="/colornumbermatch/changelog">Changelog</a>
         </nav>
 
-        <!-- Hero -->
-        <section class="hero">
-            <span class="hero-icon" aria-hidden="true">&#x1F522;</span>
+        <header class="hero">
+            <span class="hero-badge live">v1.2 &middot; Live on the App Store</span>
             <h1>Color Number Match</h1>
-            <p class="tagline">Match Colors &amp; Numbers!</p>
-            <a href="https://apps.apple.com/us/app/id6761441678" class="download-btn">Download on the App Store</a>
-        </section>
+            <p class="tagline">A vibrant puzzle game where you match tiles by color, number, or both. 2000+ levels, special tiles, Metal shader effects, CoreHaptics, and full localization for 24 languages including Arabic RTL.</p>
 
-        <!-- Stats -->
-        <div class="stats">
+            <div class="cta-row">
+                <a href="https://apps.apple.com/app/id6761441678" class="btn btn-primary">
+                    <svg class="apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.88-3.08.38-1.1-.51-2.1-.54-3.26 0-1.45.71-2.22.51-3.08-.38C1.98 14.84 2.78 6.41 9.05 6.1c1.55.06 2.63.85 3.52.9 1.34-.28 2.63-1.05 4.05-.98 1.72.14 3.02.88 3.86 2.17-3.55 2.15-2.99 6.72.24 8.1-.65 1.65-1.5 3.26-2.67 4zM12.03 6.03c-.17-2.58 1.93-4.69 4.3-4.93.32 2.81-2.47 5.09-4.3 4.93z"/></svg>
+                    Download on the App Store
+                </a>
+                <a href="/colornumbermatch/changelog" class="btn btn-ghost">Release Notes</a>
+            </div>
+        </header>
+
+        <div class="hero-image-wrap">
+            <picture>
+                <source srcset="/assets/color-number-match-hero.webp" type="image/webp">
+                <img src="/assets/color-number-match-hero.jpg" alt="Color Number Match gameplay artwork with vibrant tiles" loading="eager" fetchpriority="high" decoding="async">
+            </picture>
+        </div>
+
+        <section class="stats">
             <div class="stat-item">
                 <div class="stat-num">2000+</div>
                 <div class="stat-label">Levels</div>
@@ -392,89 +95,90 @@
                 <div class="stat-num">24</div>
                 <div class="stat-label">Languages</div>
             </div>
-        </div>
+            <div class="stat-item">
+                <div class="stat-num">20</div>
+                <div class="stat-label">Achievements</div>
+            </div>
+        </section>
 
-        <!-- Features -->
-        <h2 class="section-title">Features</h2>
-        <div class="features">
+        <section class="features">
             <div class="feature">
-                <div class="feature-icon">&#x1F3AE;</div>
+                <span class="feature-icon" aria-hidden="true">&#x1F3AE;</span>
                 <h3>2000+ Levels</h3>
-                <p>10 level packs with increasing difficulty. From beginner to expert-level matching challenges.</p>
+                <p>10 level packs with progressive difficulty, from beginner warm-ups to expert-level challenges.</p>
             </div>
             <div class="feature">
-                <div class="feature-icon">&#x1F4A3;</div>
+                <span class="feature-icon" aria-hidden="true">&#x1F4A3;</span>
                 <h3>Special Tiles</h3>
-                <p>Bomb clears a 3x3 area, Rainbow matches any tile, Frozen tiles need multiple matches to break.</p>
+                <p>Bomb clears a 3&times;3 area, Rainbow matches any tile, Frozen tiles need multiple matches.</p>
             </div>
             <div class="feature">
-                <div class="feature-icon">&#x1F30D;</div>
-                <h3>24 Languages</h3>
-                <p>Full localization including Arabic RTL support. Play in your preferred language.</p>
+                <span class="feature-icon" aria-hidden="true">&#x1F308;</span>
+                <h3>Metal Shaders</h3>
+                <p>GPU-accelerated dissolve, ripple, shimmer, combo glow, frosted glass, and rainbow cycle effects.</p>
             </div>
             <div class="feature">
-                <div class="feature-icon">&#x1F4C5;</div>
-                <h3>Daily Challenges</h3>
-                <p>New challenges every day with bonus coin rewards. Build your streak for extra prizes.</p>
+                <span class="feature-icon" aria-hidden="true">&#x1F4F3;</span>
+                <h3>CoreHaptics</h3>
+                <p>Bespoke haptic patterns for tile select, match, combo, win, loss, and streak milestones.</p>
             </div>
             <div class="feature">
-                <div class="feature-icon">&#x1F3C6;</div>
+                <span class="feature-icon" aria-hidden="true">&#x1F3C6;</span>
                 <h3>Game Center</h3>
-                <p>Compete on leaderboards and unlock achievements. See how you rank globally.</p>
+                <p>20 achievements and global leaderboards. See how you rank against players worldwide.</p>
             </div>
             <div class="feature">
-                <div class="feature-icon">&#x1F4F3;</div>
-                <h3>Haptic Feedback</h3>
-                <p>Feel every match with satisfying haptic responses. Tactile feedback for all interactions.</p>
+                <span class="feature-icon" aria-hidden="true">&#x1F4C5;</span>
+                <h3>Daily Challenges</h3>
+                <p>New challenges every day with bonus coin rewards and streak multipliers.</p>
             </div>
             <div class="feature">
-                <div class="feature-icon">&#x1F319;</div>
-                <h3>Dark Mode &amp; Themes</h3>
-                <p>Automatic dark and light mode. Metal shaders power beautiful visual effects.</p>
+                <span class="feature-icon" aria-hidden="true">&#x1F310;</span>
+                <h3>24 Languages</h3>
+                <p>Full localization including Arabic RTL, Hindi, Thai, Vietnamese, and more.</p>
             </div>
             <div class="feature">
-                <div class="feature-icon">&#x267F;</div>
+                <span class="feature-icon" aria-hidden="true">&#x267F;</span>
                 <h3>Accessibility</h3>
-                <p>Colorblind mode, VoiceOver support, Dynamic Type, and Reduce Motion options.</p>
+                <p>Colorblind mode, VoiceOver, Dynamic Type, and Reduce Motion options.</p>
             </div>
-        </div>
+        </section>
 
-        <!-- What's New -->
-        <div class="whats-new">
-            <h2 class="section-title">What's New</h2>
-            <div class="whats-new-card">
-                <span class="version-badge">v1.2</span>
-                <h3>Latest Update</h3>
-                <ul>
-                    <li>24 languages with full Arabic RTL support</li>
-                    <li>Metal-powered visual shaders and effects</li>
-                    <li>Enhanced haptic feedback system</li>
-                    <li>Daily challenge streak rewards</li>
-                    <li>Game Center leaderboards and achievements</li>
-                    <li>Colorblind mode and accessibility improvements</li>
-                    <li>New special tiles: Bomb, Rainbow, Frozen</li>
-                    <li>Performance and stability improvements</li>
-                </ul>
-            </div>
-        </div>
+        <section class="section">
+            <h2>What&rsquo;s New in v1.2 &mdash; &ldquo;Engagement Update&rdquo;</h2>
+            <ul>
+                <li><strong>Special Tiles</strong> &mdash; Bomb, Rainbow, and Frozen tiles woven into level generation.</li>
+                <li><strong>Metal Shader Effects</strong> &mdash; GPU-accelerated visuals with graceful fallback.</li>
+                <li><strong>CoreHaptics</strong> &mdash; dedicated HapticManager with bespoke patterns.</li>
+                <li><strong>Push Notifications</strong> &mdash; daily challenge, streak, lives-full, and inactivity reminders.</li>
+                <li><strong>Watch Ad for +3 Moves</strong> &mdash; opt-in rewarded ad offer before game over.</li>
+                <li><strong>Game Center Achievements</strong> &mdash; 20 milestones to unlock.</li>
+                <li><strong>24 Languages</strong> &mdash; grew from 7 at launch.</li>
+                <li><strong>iPad Optimization</strong> &mdash; two-column layout, sidebar settings, 4-column home nav.</li>
+            </ul>
+            <p style="margin-top: 16px;"><a href="/colornumbermatch/changelog" style="color: var(--accent-1); font-weight: 600;">View full changelog &rarr;</a></p>
+        </section>
 
-        <!-- Footer -->
-        <footer class="footer">
+        <footer class="site-footer">
             <div class="footer-links">
+                <a href="/">Home</a>
                 <a href="/privacy">Privacy Policy</a>
-                <a href="/terms">Terms of Service</a>
+                <a href="/terms">Terms of Use</a>
                 <a href="/colornumbermatch/support">Support</a>
+                <a href="/colornumbermatch/changelog">Changelog</a>
                 <a href="https://x.com/thesuper_hunter">X (Twitter)</a>
                 <a href="mailto:alsuhaymiziyad@gmail.com">Contact</a>
             </div>
-            <div class="other-games">
-                <span>More from Ziyad Alsuhaymi:</span>
-                <a href="/block-blaster/">Block Blaster Puzzle</a>
-                <a href="/echoes/">Echoes</a>
-            </div>
-            <p class="copyright">&copy; 2025-2026 Ziyad Alsuhaymi. All rights reserved.</p>
-        </footer>
+            <p class="copyright">&copy; 2025&ndash;2026 Ziyad Alsuhaymi. All rights reserved.</p>
 
+            <div class="other-apps">
+                <span class="label">More from Ziyad Alsuhaymi</span>
+                <div class="other-apps-list">
+                    <a href="/block-blaster/">&#x1F4A5; Block Blaster Puzzle</a>
+                    <a href="/echoes/">&#x1F30D; Echoes</a>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
