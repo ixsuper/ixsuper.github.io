@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://ixsuper.github.io/</loc>
+        <lastmod>2026-04-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://ixsuper.github.io/assets/color-number-match-hero.jpg</image:loc>
+            <image:title>Ziyad Alsuhaymi — iOS Apps Portfolio</image:title>
+        </image:image>
+    </url>
+
+    <!-- Echoes -->
+    <url>
+        <loc>https://ixsuper.github.io/echoes/</loc>
+        <lastmod>2026-04-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://ixsuper.github.io/assets/echoes-hero.jpg</image:loc>
+            <image:title>Echoes: Echoes of the City</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://ixsuper.github.io/echoes/privacy</loc>
+        <lastmod>2026-04-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://ixsuper.github.io/echoes/terms</loc>
+        <lastmod>2026-04-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://ixsuper.github.io/echoes/support</loc>
+        <lastmod>2026-04-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Block Blaster Puzzle -->
+    <url>
+        <loc>https://ixsuper.github.io/block-blaster/</loc>
+        <lastmod>2026-04-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://ixsuper.github.io/assets/block-blaster-hero.jpg</image:loc>
+            <image:title>Block Blaster Puzzle</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://ixsuper.github.io/block-blaster/privacy</loc>
+        <lastmod>2026-04-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://ixsuper.github.io/block-blaster/terms</loc>
+        <lastmod>2026-04-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://ixsuper.github.io/block-blaster/support</loc>
+        <lastmod>2026-04-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
+    <!-- Color Number Match -->
+    <url>
+        <loc>https://ixsuper.github.io/colornumbermatch/</loc>
+        <lastmod>2026-04-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://ixsuper.github.io/assets/color-number-match-hero.jpg</image:loc>
+            <image:title>Color Number Match</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://ixsuper.github.io/colornumbermatch/support</loc>
+        <lastmod>2026-04-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://ixsuper.github.io/colornumbermatch/changelog</loc>
+        <lastmod>2026-04-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://ixsuper.github.io/privacy</loc>
+        <lastmod>2026-04-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://ixsuper.github.io/terms</loc>
+        <lastmod>2026-04-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+</urlset>

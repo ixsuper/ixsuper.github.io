@@ -6,16 +6,42 @@
     <title>Ziyad Alsuhaymi — iOS Apps & Games Developer</title>
     <meta name="description" content="Premium iOS apps and games by Ziyad Alsuhaymi. Echoes, Block Blaster Puzzle, and Color Number Match.">
     <meta name="author" content="Ziyad Alsuhaymi">
-    <meta name="theme-color" content="#070a1a">
+    <meta name="theme-color" content="#070a1a" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f5f6ff" media="(prefers-color-scheme: light)">
+    <meta name="color-scheme" content="dark light">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Ziyad Alsuhaymi — iOS Apps & Games Developer">
     <meta property="og:description" content="Premium iOS apps and games by Ziyad Alsuhaymi. Echoes, Block Blaster Puzzle, and Color Number Match.">
     <meta property="og:url" content="https://ixsuper.github.io">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ziyad Alsuhaymi">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://ixsuper.github.io/assets/color-number-match-hero.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1200">
+    <meta property="og:image:alt" content="Ziyad Alsuhaymi — iOS Apps Portfolio">
 
-    <link rel="canonical" href="https://ixsuper.github.io">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@thesuper_hunter">
+    <meta name="twitter:creator" content="@thesuper_hunter">
+    <meta name="twitter:title" content="Ziyad Alsuhaymi — iOS Apps & Games Developer">
+    <meta name="twitter:description" content="Premium iOS apps and games by Ziyad Alsuhaymi. Echoes, Block Blaster Puzzle, and Color Number Match.">
+    <meta name="twitter:image" content="https://ixsuper.github.io/assets/color-number-match-hero.jpg">
+
+    <link rel="canonical" href="https://ixsuper.github.io/">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- Preload above-the-fold hero image (Echoes — first card) -->
+    <link rel="preload" as="image" href="/assets/echoes-hero.webp" type="image/webp" fetchpriority="high">
 
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -662,7 +688,10 @@
                 <div class="graphic echoes graphic-left">
                     <div class="graphic-art"></div>
                     <span class="graphic-emoji" aria-hidden="true">&#x1F30D;</span>
-                    <img class="graphic-img" src="/assets/echoes-hero.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()">
+                    <picture>
+                        <source srcset="/assets/echoes-hero.webp" type="image/webp">
+                        <img class="graphic-img" src="/assets/echoes-hero.jpg" alt="" loading="eager" fetchpriority="high" decoding="async" onerror="this.parentElement.remove()">
+                    </picture>
                 </div>
                 <div class="info">
                     <div class="badge-row">
@@ -682,7 +711,10 @@
                 <div class="graphic echoes graphic-right">
                     <div class="graphic-art"></div>
                     <span class="graphic-emoji" aria-hidden="true">&#x2728;</span>
-                    <img class="graphic-img" src="/assets/echoes-social.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()">
+                    <picture>
+                        <source srcset="/assets/echoes-social.webp" type="image/webp">
+                        <img class="graphic-img" src="/assets/echoes-social.jpg" alt="" loading="lazy" decoding="async" onerror="this.parentElement.remove()">
+                    </picture>
                 </div>
             </article>
 
@@ -691,7 +723,10 @@
                 <div class="graphic blocks graphic-left">
                     <div class="graphic-art"></div>
                     <span class="graphic-emoji" aria-hidden="true">&#x1F4A5;</span>
-                    <img class="graphic-img" src="/assets/block-blaster-hero.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()">
+                    <picture>
+                        <source srcset="/assets/block-blaster-hero.webp" type="image/webp">
+                        <img class="graphic-img" src="/assets/block-blaster-hero.jpg" alt="" loading="lazy" decoding="async" onerror="this.parentElement.remove()">
+                    </picture>
                 </div>
                 <div class="info">
                     <div class="badge-row">
@@ -713,7 +748,10 @@
                 <div class="graphic blocks graphic-right">
                     <div class="graphic-art"></div>
                     <span class="graphic-emoji" aria-hidden="true">&#x1F9E9;</span>
-                    <img class="graphic-img" src="/assets/block-blaster-social.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()">
+                    <picture>
+                        <source srcset="/assets/block-blaster-social.webp" type="image/webp">
+                        <img class="graphic-img" src="/assets/block-blaster-social.jpg" alt="" loading="lazy" decoding="async" onerror="this.parentElement.remove()">
+                    </picture>
                 </div>
             </article>
 
@@ -722,7 +760,10 @@
                 <div class="graphic colors graphic-left">
                     <div class="graphic-art"></div>
                     <span class="graphic-emoji" aria-hidden="true">&#x1F522;</span>
-                    <img class="graphic-img" src="/assets/color-number-match-hero.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()">
+                    <picture>
+                        <source srcset="/assets/color-number-match-hero.webp" type="image/webp">
+                        <img class="graphic-img" src="/assets/color-number-match-hero.jpg" alt="" loading="lazy" decoding="async" onerror="this.parentElement.remove()">
+                    </picture>
                 </div>
                 <div class="info">
                     <div class="badge-row">
@@ -748,7 +789,10 @@
                 <div class="graphic colors graphic-right">
                     <div class="graphic-art"></div>
                     <span class="graphic-emoji" aria-hidden="true">&#x1F308;</span>
-                    <img class="graphic-img" src="/assets/color-number-match-social.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()">
+                    <picture>
+                        <source srcset="/assets/color-number-match-social.webp" type="image/webp">
+                        <img class="graphic-img" src="/assets/color-number-match-social.jpg" alt="" loading="lazy" decoding="async" onerror="this.parentElement.remove()">
+                    </picture>
                 </div>
             </article>
 
