@@ -38,6 +38,39 @@
     <meta name="twitter:image" content="https://ixsuper.github.io/assets/color-number-match-hero.jpg">
 
     <link rel="canonical" href="https://ixsuper.github.io/zh-Hant/">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ziyad Alsuhaymi",
+        "url": "https://ixsuper.github.io/",
+        "jobTitle": "iOS App & Game Developer",
+        "sameAs": [
+            "https://x.com/thesuper_hunter",
+            "https://apps.apple.com/developer/id6761441678"
+        ],
+        "email": "mailto:alsuhaymiziyad@gmail.com",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Independent"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://ixsuper.github.io/",
+        "name": "Ziyad Alsuhaymi",
+        "description": "Premium iOS apps and games by Ziyad Alsuhaymi.",
+        "inLanguage": "en",
+        "author": {
+            "@type": "Person",
+            "name": "Ziyad Alsuhaymi"
+        }
+    }
+    </script>
     <link rel="alternate" hreflang="en" href="https://ixsuper.github.io/">
     <link rel="alternate" hreflang="ar" href="https://ixsuper.github.io/ar/">
     <link rel="alternate" hreflang="da" href="https://ixsuper.github.io/da/">
@@ -213,7 +246,91 @@
             z-index: 1;
             max-width: 1120px;
             margin: 0 auto;
-            padding: 88px 32px 56px;
+            padding: 56px 32px 56px;
+        }
+
+        /* ============ Global sticky topbar ============ */
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 90;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 14px 28px;
+            padding-inline-end: 180px;
+            background: rgba(7, 10, 26, 0.6);
+            backdrop-filter: blur(22px) saturate(150%);
+            -webkit-backdrop-filter: blur(22px) saturate(150%);
+            border-bottom: 1px solid var(--border);
+        }
+        @media (prefers-color-scheme: light) {
+            .topbar { background: rgba(245, 246, 255, 0.7); }
+        }
+        .topbar-brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.96em;
+            letter-spacing: -0.01em;
+            white-space: nowrap;
+        }
+        .topbar-mark {
+            display: inline-grid;
+            place-items: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 9px;
+            background: linear-gradient(135deg, #4f80ff, #7b5cff);
+            color: #fff;
+            font-weight: 900;
+            font-size: 0.9em;
+            box-shadow: 0 6px 18px rgba(123, 92, 255, 0.32);
+        }
+        .topbar-links {
+            display: flex;
+            align-items: center;
+            gap: 26px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        .topbar-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s ease;
+            white-space: nowrap;
+        }
+        .topbar-links a:hover,
+        .topbar-links a[aria-current="page"] {
+            color: var(--text);
+        }
+        .topbar-links a[aria-current="page"] {
+            position: relative;
+        }
+        .topbar-links a[aria-current="page"]::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -6px;
+            height: 2px;
+            border-radius: 2px;
+            background: linear-gradient(90deg, #4f80ff, #50dcff);
+        }
+        @media (max-width: 720px) {
+            .topbar { padding: 10px 16px; padding-inline-end: 150px; gap: 12px; }
+            .topbar-name { display: none; }
+            .topbar-links { gap: 16px; font-size: 0.86em; }
+            .page { padding-top: 36px; }
+        }
+        @media (max-width: 520px) {
+            .topbar { padding-inline-end: 120px; }
+            .topbar-links { gap: 12px; font-size: 0.82em; }
+            .topbar-links a.topbar-changelog { display: none; }
         }
 
         /* ============ Header ============ */
@@ -729,9 +846,399 @@
                 transition-duration: 0.01ms !important;
             }
             .app-card { opacity: 1; transform: none; }
-            .header, .site-footer { opacity: 1; transform: none; }
+            .header, .site-footer, .hero, .bio-section, .tech-section, .contact-section { opacity: 1; transform: none; }
         }
-    
+
+        /* ============ Hero (avatar + bio) ============ */
+        .hero {
+            text-align: center;
+            margin-bottom: 96px;
+            padding-top: 12px;
+            opacity: 0;
+            transform: translateY(-12px);
+            animation: fadeInDown 1s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
+        }
+        .avatar {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 28px;
+        }
+        .avatar svg {
+            display: block;
+            border-radius: 50%;
+            box-shadow:
+                0 20px 60px rgba(123, 92, 255, 0.45),
+                0 0 0 1px rgba(255, 255, 255, 0.12),
+                inset 0 1px 0 rgba(255, 255, 255, 0.25);
+            animation: avatarFloat 6s ease-in-out infinite;
+        }
+        @keyframes avatarFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+        .avatar-status {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: #2dd4bf;
+            border: 3px solid var(--bg-0);
+            box-shadow: 0 0 0 1px rgba(45, 212, 191, 0.6), 0 0 16px rgba(45, 212, 191, 0.55);
+            animation: pulseStatus 2.4s ease-in-out infinite;
+        }
+        @keyframes pulseStatus {
+            0%, 100% { box-shadow: 0 0 0 1px rgba(45, 212, 191, 0.6), 0 0 16px rgba(45, 212, 191, 0.55); }
+            50% { box-shadow: 0 0 0 1px rgba(45, 212, 191, 0.85), 0 0 26px rgba(45, 212, 191, 0.9); }
+        }
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 7px 14px;
+            margin-bottom: 26px;
+            border-radius: 100px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            font-size: 0.78em;
+            font-weight: 600;
+            color: var(--text-muted);
+            letter-spacing: 0.2px;
+        }
+        .status-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #2dd4bf;
+            box-shadow: 0 0 8px rgba(45, 212, 191, 0.85);
+            animation: pulseStatus 2.4s ease-in-out infinite;
+        }
+        .hero-title {
+            font-size: clamp(2.6em, 6.5vw, 4.8em);
+            font-weight: 900;
+            letter-spacing: -0.035em;
+            line-height: 1.04;
+            margin-bottom: 24px;
+            color: var(--text);
+        }
+        .hero-name {
+            background: linear-gradient(135deg, #4f80ff 0%, #7b5cff 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-grad {
+            background: linear-gradient(135deg, #50dcff 0%, #4f80ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-bio {
+            font-size: clamp(1.02em, 1.5vw, 1.18em);
+            line-height: 1.7;
+            color: var(--text-muted);
+            max-width: 620px;
+            margin: 0 auto 36px;
+        }
+        .hero-cta {
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            justify-content: center;
+            margin-bottom: 56px;
+        }
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 14px 26px;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 0.95em;
+            text-decoration: none;
+            transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease, background 0.25s ease;
+            border: none;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        .hero-btn-primary {
+            background: linear-gradient(135deg, #4f80ff, #7b5cff);
+            color: #fff;
+            box-shadow: 0 12px 32px rgba(79, 128, 255, 0.4);
+        }
+        .hero-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 48px rgba(123, 92, 255, 0.55);
+        }
+        .hero-btn-primary svg { transition: transform 0.25s ease; }
+        .hero-btn-primary:hover svg { transform: translateX(3px); }
+        .hero-btn-ghost {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text);
+            border: 1px solid var(--border-hi);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-btn-ghost:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+        }
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 56px;
+            flex-wrap: wrap;
+            padding: 28px 36px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            backdrop-filter: blur(20px) saturate(140%);
+            -webkit-backdrop-filter: blur(20px) saturate(140%);
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .hero-stat {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .hero-stat-num {
+            font-size: clamp(1.7em, 2.6vw, 2.2em);
+            font-weight: 900;
+            background: linear-gradient(135deg, #fff 0%, #a5b4d1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+        .hero-stat-label {
+            font-size: 0.7em;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-dim);
+            font-weight: 600;
+        }
+
+        /* ============ Section eyebrow + title ============ */
+        .section-eyebrow {
+            display: inline-block;
+            font-size: 0.7em;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+            padding: 6px 14px;
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .section-title {
+            font-size: clamp(1.7em, 3vw, 2.4em);
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            line-height: 1.12;
+            margin-bottom: 24px;
+            color: var(--text);
+        }
+
+        /* ============ Featured work header ============ */
+        .work-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        /* ============ Bio section ============ */
+        .bio-section {
+            margin: 96px auto 80px;
+            max-width: 760px;
+            text-align: center;
+        }
+        .bio-text {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 18px;
+        }
+        .bio-text strong { color: var(--text); font-weight: 700; }
+
+        /* ============ Principles section ============ */
+        .principles-section {
+            margin: 0 auto 96px;
+            max-width: 920px;
+        }
+        .principles-header {
+            text-align: center;
+            margin-bottom: 36px;
+        }
+        .principles {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+        .principle {
+            position: relative;
+            padding: 32px 30px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            backdrop-filter: blur(20px) saturate(140%);
+            -webkit-backdrop-filter: blur(20px) saturate(140%);
+            transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
+            overflow: hidden;
+        }
+        .principle::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 80% 60% at 0% 0%, rgba(123, 92, 255, 0.12), transparent 60%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+        .principle:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-hi);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+        }
+        .principle:hover::before { opacity: 1; }
+        .principle > * { position: relative; z-index: 1; }
+        .principle-num {
+            display: inline-block;
+            font-size: 0.7em;
+            font-weight: 800;
+            color: var(--text-dim);
+            letter-spacing: 0.22em;
+            margin-bottom: 16px;
+            font-variant-numeric: tabular-nums;
+            background: linear-gradient(135deg, #4f80ff, #7b5cff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            opacity: 0.85;
+        }
+        .principle h3 {
+            font-size: 1.18em;
+            font-weight: 800;
+            letter-spacing: -0.015em;
+            margin-bottom: 10px;
+            color: var(--text);
+            line-height: 1.25;
+        }
+        .principle p {
+            font-size: 0.94em;
+            line-height: 1.7;
+            color: var(--text-muted);
+        }
+        @media (max-width: 640px) {
+            .principles { grid-template-columns: 1fr; gap: 14px; }
+            .principle { padding: 26px 24px; }
+        }
+
+        /* ============ Contact section ============ */
+        .contact-section {
+            margin: 0 auto 80px;
+            max-width: 780px;
+        }
+        .contact-card {
+            position: relative;
+            padding: 64px 44px;
+            text-align: center;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 32px;
+            backdrop-filter: blur(24px) saturate(140%);
+            -webkit-backdrop-filter: blur(24px) saturate(140%);
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+        }
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 80% at 50% 0%, rgba(123, 92, 255, 0.28), transparent 70%),
+                radial-gradient(ellipse 60% 80% at 50% 100%, rgba(80, 220, 255, 0.2), transparent 70%);
+            pointer-events: none;
+        }
+        .contact-card > * { position: relative; z-index: 1; }
+        .contact-title {
+            font-size: clamp(1.8em, 3.4vw, 2.4em);
+            font-weight: 900;
+            letter-spacing: -0.025em;
+            margin-bottom: 14px;
+            background: linear-gradient(135deg, #fff 0%, #a5b4d1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .contact-sub {
+            font-size: 1em;
+            color: var(--text-muted);
+            margin: 0 auto 32px;
+            max-width: 480px;
+            line-height: 1.65;
+        }
+        .contact-actions {
+            display: inline-flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 24px;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 0.92em;
+            text-decoration: none;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+            white-space: nowrap;
+        }
+        .contact-btn-primary {
+            background: linear-gradient(135deg, #4f80ff, #7b5cff);
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(79, 128, 255, 0.35);
+        }
+        .contact-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 16px 44px rgba(123, 92, 255, 0.5);
+        }
+        .contact-btn-ghost {
+            background: rgba(255, 255, 255, 0.06);
+            color: var(--text);
+            border: 1px solid var(--border-hi);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .contact-btn-ghost:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-2px);
+        }
+
+        /* ============ Hero responsive ============ */
+        @media (max-width: 720px) {
+            .hero { margin-bottom: 64px; }
+            .hero-stats { gap: 32px; padding: 22px 24px; }
+            .bio-section { margin: 64px auto 56px; }
+            .principles-section { margin: 0 auto 64px; }
+            .contact-card { padding: 48px 26px; }
+        }
+        @media (max-width: 480px) {
+            .hero-cta { flex-direction: column; width: 100%; max-width: 320px; }
+            .hero-btn { width: 100%; justify-content: center; }
+            .hero-stats { gap: 22px 36px; }
+            .contact-actions { flex-direction: column; width: 100%; max-width: 320px; margin: 0 auto; }
+            .contact-btn { width: 100%; justify-content: center; }
+        }
+
         /* ============ Language switcher (topbar flex child) ============ */
         .lang-switcher {
             display: inline-flex;
@@ -799,20 +1306,20 @@
 </head>
 <body>
     <nav class="topbar" aria-label="Primary">
-        <a class="topbar-brand" href="/zh-Hant/">
+        <a class="topbar-brand" href="/">
             <span class="topbar-mark" aria-hidden="true">Z</span>
             <span class="topbar-name">Ziyad Alsuhaymi</span>
         </a>
         <div class="topbar-links">
-            <a href="/zh-Hant/" aria-current="page">首頁</a>
-            <a href="/zh-Hant/echoes/">Echoes</a>
-            <a href="/zh-Hant/block-blaster/">Block Blaster</a>
-            <a href="/zh-Hant/colornumbermatch/">Color Match</a>
-            <a href="/zh-Hant/colornumbermatch/changelog" class="topbar-changelog">更新日誌</a>
+            <a href="/" aria-current="page">Home</a>
+            <a href="/echoes/">Echoes</a>
+            <a href="/block-blaster/">Block Blaster</a>
+            <a href="/colornumbermatch/">Color Match</a>
+            <a class="topbar-changelog" href="/colornumbermatch/changelog">更新日誌</a>
         </div>
-        <div class="lang-switcher" aria-label="語言">
+        <div class="lang-switcher" aria-label="Language">
             <svg viewBox="0 0 24 24" aria-hidden="true" class="lang-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41C19.07 5.78 20 8.83 20 12c0 1.94-.48 3.75-1.3 5.39h-.8z"/></svg>
-            <select onchange="window.location.href=this.value" aria-label="語言">
+            <select onchange="window.location.href=this.value" aria-label="Language">
                 <option value="/">English</option>
                 <option value="/ar/">العربية</option>
                 <option value="/da/">Dansk</option>
@@ -853,12 +1360,65 @@
 
     <div class="page">
 
-        <!-- Header -->
-        <header class="header">
-            <div class="header-mark" aria-hidden="true">&#x1F4F1;</div>
-            <h1>Ziyad Alsuhaymi</h1>
-            <p class="subtitle">iOS 應用與遊戲開發者</p>
+        <!-- Hero -->
+        <header class="hero">
+            <div class="avatar">
+                <svg viewBox="0 0 96 96" width="108" height="108" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="avatarG" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#4f80ff"/>
+                            <stop offset="50%" stop-color="#7b5cff"/>
+                            <stop offset="100%" stop-color="#ec4899"/>
+                        </linearGradient>
+                        <radialGradient id="avatarHi" cx="0.3" cy="0.25" r="0.7">
+                            <stop offset="0%" stop-color="rgba(255,255,255,0.55)"/>
+                            <stop offset="60%" stop-color="rgba(255,255,255,0)"/>
+                        </radialGradient>
+                    </defs>
+                    <circle cx="48" cy="48" r="46" fill="url(#avatarG)"/>
+                    <circle cx="48" cy="48" r="46" fill="url(#avatarHi)"/>
+                    <text x="50%" y="56%" text-anchor="middle" dominant-baseline="middle" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="46" font-weight="900" fill="#fff" letter-spacing="-1">Z</text>
+                </svg>
+                <span class="avatar-status" title="Available for work"></span>
+            </div>
+            <div class="hero-eyebrow">
+                <span class="status-dot"></span>
+                可接專案 · 沙烏地阿拉伯
+            </div>
+            <h1 class="hero-title">你好，我是 <span class="hero-name">Ziyad</span>。<br>我打造高品質的 <span class="hero-grad">iOS 應用</span>。</h1>
+            <p class="hero-bio">獨立 iOS 開發者，從第一筆草圖到上架都親自完成。一款 App 已上架，兩款正在開發，以及一長串我絕不將就的細節。</p>
+            <div class="hero-cta">
+                <a href="#work" class="hero-btn hero-btn-primary">
+                    查看作品
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </a>
+                <a href="mailto:alsuhaymiziyad@gmail.com" class="hero-btn hero-btn-ghost">聯絡我</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hero-stat-num">1</span>
+                    <span class="hero-stat-label">已上架</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">2</span>
+                    <span class="hero-stat-label">開發中</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">2K+</span>
+                    <span class="hero-stat-label">益智關卡</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="hero-stat-num">單人</span>
+                    <span class="hero-stat-label">獨立開發者</span>
+                </div>
+            </div>
         </header>
+
+        <!-- Featured work header -->
+        <div class="work-header" id="work">
+            <div class="section-eyebrow">精選作品</div>
+            <h2 class="section-title">三款應用，一種執念：把細節打磨到底。</h2>
+        </div>
 
         <!-- App Cards -->
         <main class="cards">
@@ -982,6 +1542,66 @@
 
         </main>
 
+        <!-- About / Bio -->
+        <section class="bio-section" id="about">
+            <div class="section-eyebrow">關於我</div>
+            <h2 class="section-title">一個跟細節較勁的創作者。</h2>
+            <p class="bio-text">
+                我是 Ziyad ——來自沙烏地阿拉伯的獨立 iOS 開發者。設計、編碼、發布都由我一人完成。首款 App <strong>Color Number Match</strong> 已經上架 App Store，擁有 2,000+ 關卡，支援 25 種語言。另外兩款 —— <strong>Echoes</strong> 和 <strong>Block Blaster</strong> —— 正在路上。
+            </p>
+            <p class="bio-text">
+                我在意的是那些小事：有目的的觸覺回饋、有理由的動畫、讀起來像人寫的翻譯。時間就花在這裡。
+            </p>
+        </section>
+
+        <!-- How I work -->
+        <section class="principles-section">
+            <div class="principles-header">
+                <div class="section-eyebrow">原則</div>
+                <h2 class="section-title">我的工作方式</h2>
+            </div>
+            <div class="principles">
+                <article class="principle">
+                    <span class="principle-num">01</span>
+                    <h3>獨自打磨是我的選擇</h3>
+                    <p>一個大腦，一種想法。比團隊更慢 —— 這正是意義所在。每個決定都能從草圖原封不動地走到上架。</p>
+                </article>
+                <article class="principle">
+                    <span class="principle-num">02</span>
+                    <h3>打磨到位，否則等</h3>
+                    <p>畫面沒有對的感覺，就不算做完。觸感沒做到位，就不上架。截止日期可以推；標準不會。</p>
+                </article>
+                <article class="principle">
+                    <span class="principle-num">03</span>
+                    <h3>在地化，而非翻譯</h3>
+                    <p>25 種語言，由真人校對。阿拉伯文是首要測試對象，絕不是事後補的 —— 正確的 RTL、原生字體、真實語境。</p>
+                </article>
+                <article class="principle">
+                    <span class="principle-num">04</span>
+                    <h3>面小，功深</h3>
+                    <p>我寧願你記住一次互動，也不要你數一百個功能。少而用心，勝過多而倉促。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section class="contact-section" id="contact">
+            <div class="contact-card">
+                <h2 class="contact-title">一起來做點什麼吧。</h2>
+                <p class="contact-sub">歡迎遠端合作、專案共創，或只是聊聊獨立 iOS 開發。每封信我都會看。</p>
+                <div class="contact-actions">
+                    <a href="mailto:alsuhaymiziyad@gmail.com" class="contact-btn contact-btn-primary">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        alsuhaymiziyad@gmail.com
+                    </a>
+                    <a href="https://x.com/thesuper_hunter" class="contact-btn contact-btn-ghost">
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        @thesuper_hunter
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!-- Footer -->
         <footer class="site-footer">
             <div class="site-footer-links">
@@ -994,7 +1614,7 @@
                     Contact
                 </a>
             </div>
-            <p class="copyright">© 2025–2026 Ziyad Alsuhaymi. 版權所有。</p>
+            <p class="copyright">© 2025–2026 Ziyad Alsuhaymi. All rights reserved.</p>
         </footer>
 
     </div>
@@ -1048,5 +1668,6 @@
             cards.forEach(function (card) { observer.observe(card); });
         })();
     </script>
+    <script defer src="/assets/analytics.js"></script>
 </body>
 </html>

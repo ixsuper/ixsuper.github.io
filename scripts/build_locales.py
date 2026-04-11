@@ -18,6 +18,10 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "index.html")
 
+# Make sibling modules importable when run from any cwd.
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from i18n_hero import NEW_T  # noqa: E402
+
 # -----------------------------------------------------------------------------
 # Language metadata: (code, endonym, dir)
 # 25 languages = English + 24 others.
@@ -277,7 +281,7 @@ T = {
         "zh-Hant": "用照片、環境聲、天氣和位置捕捉鮮活的記憶。專為 iOS 26 打造，搭載 Liquid Glass、端側機器學習和沉浸式記憶地圖。支援 11 種語言。",
     },
     "blocks_desc": {
-        "en": "A satisfying block puzzle game with explosive combos, sensory themes, and haptic feedback. 10×10 grid, 5 game modes, 7 languages.",
+        "en": "A satisfying block puzzle game with explosive combos, sensory themes, and haptic feedback. 6 game modes, 50 adventure levels, 7 languages.",
         "ar": "لعبة ألغاز مكعّبات ممتعة مع كومبوات متفجّرة وثيمات حسّية وردود فعل لمسية. شبكة 10×10 و5 أنماط لعب وبـ7 لغات.",
         "da": "Et tilfredsstillende blokspil med eksplosive combos, sansetemaer og haptisk feedback. 10×10 gitter, 5 spilmodi, 7 sprog.",
         "de": "Ein befriedigendes Blockpuzzle mit explosiven Combos, Sinnesthemen und haptischem Feedback. 10×10-Raster, 5 Spielmodi, 7 Sprachen.",
@@ -365,6 +369,9 @@ T = {
         "uk": "Мова", "ur": "زبان", "vi": "Ngôn ngữ", "zh-Hans": "语言", "zh-Hant": "語言",
     },
 }
+
+# Merge hero/about/principles/contact translation keys from i18n_hero.py.
+T.update(NEW_T)
 
 
 def hreflang_block() -> str:
@@ -460,8 +467,6 @@ REPLACEMENTS = [
                              lambda t: f'content="{t["page_title"]}"'),
     ("og_title2",            'content="Ziyad Alsuhaymi — iOS Apps & Games Developer"',
                              lambda t: f'content="{t["page_title"]}"'),
-    ("subtitle",             '<p class="subtitle">iOS Apps &amp; Games Developer</p>',
-                             lambda t: f'<p class="subtitle">{t["brand_subtitle"]}</p>'),
     # Badges
     ("badge_new",            '<span class="badge badge-live">New</span>',
                              lambda t: f'<span class="badge badge-live">{t["badge_new"]}</span>'),
@@ -472,7 +477,7 @@ REPLACEMENTS = [
     # Descriptions
     ("echoes_desc",          'Capture living memories with photo, ambient sound, weather, and location. Built for iOS 26 with Liquid Glass, on-device ML, and an immersive memory map. 11 languages.',
                              lambda t: t["echoes_desc"]),
-    ("blocks_desc",          'A satisfying block puzzle game with explosive combos, sensory themes, and haptic feedback. 10x10 grid, 5 game modes, 7 languages.',
+    ("blocks_desc",          'A satisfying block puzzle game with explosive combos, sensory themes, and haptic feedback. 6 game modes, 50 adventure levels, 7 languages.',
                              lambda t: t["blocks_desc"]),
     ("cnm_desc",             'A vibrant puzzle game with 2000+ levels across 10 packs. Match tiles by color or number with special tiles, Metal shaders, haptic feedback, and 24 languages including Arabic RTL.',
                              lambda t: t["cnm_desc"]),
@@ -496,6 +501,86 @@ REPLACEMENTS = [
     # Copyright
     ("copyright",            '<p class="copyright">&copy; 2025–2026 Ziyad Alsuhaymi. All rights reserved.</p>',
                              lambda t: f'<p class="copyright">{t["copyright"]}</p>'),
+
+    # ======================================================================
+    # Hero / About / Principles / Contact — new sections added in redesign
+    # ======================================================================
+
+    # Hero eyebrow
+    ("hero_eyebrow",         'Available for work · Saudi Arabia',
+                             lambda t: t["hero_eyebrow"]),
+    # Hero title (contains HTML spans — swap the entire <h1> body)
+    ("hero_title_html",      '<h1 class="hero-title">Hi, I\'m <span class="hero-name">Ziyad</span>.<br>I build premium <span class="hero-grad">iOS apps</span>.</h1>',
+                             lambda t: f'<h1 class="hero-title">{t["hero_title_html"]}</h1>'),
+    # Hero bio paragraph
+    ("hero_bio",             '<p class="hero-bio">Independent iOS developer building apps and games end-to-end. One app on the App Store, two more on the way, and a long list of small details I refuse to ship without.</p>',
+                             lambda t: f'<p class="hero-bio">{t["hero_bio"]}</p>'),
+    # Hero CTAs
+    ("hero_cta_view",        'hero-btn-primary">\n                    View work\n                    <svg',
+                             lambda t: f'hero-btn-primary">\n                    {t["hero_cta_view"]}\n                    <svg'),
+    ("hero_cta_contact",     'hero-btn-ghost">Get in touch</a>',
+                             lambda t: f'hero-btn-ghost">{t["hero_cta_contact"]}</a>'),
+
+    # Hero stats (4 labels + 1 translated number "Solo")
+    ("hero_stat_label_1",    '<span class="hero-stat-label">Live on App Store</span>',
+                             lambda t: f'<span class="hero-stat-label">{t["hero_stat_label_1"]}</span>'),
+    ("hero_stat_label_2",    '<span class="hero-stat-label">In development</span>',
+                             lambda t: f'<span class="hero-stat-label">{t["hero_stat_label_2"]}</span>'),
+    ("hero_stat_label_3",    '<span class="hero-stat-label">Puzzle levels</span>',
+                             lambda t: f'<span class="hero-stat-label">{t["hero_stat_label_3"]}</span>'),
+    ("hero_stat_label_4",    '<span class="hero-stat-label">Independent dev</span>',
+                             lambda t: f'<span class="hero-stat-label">{t["hero_stat_label_4"]}</span>'),
+    ("hero_stat_num_solo",   '<span class="hero-stat-num">Solo</span>',
+                             lambda t: f'<span class="hero-stat-num">{t["hero_stat_num_solo"]}</span>'),
+
+    # Featured Work section header
+    ("work_eyebrow",         '<div class="section-eyebrow">Featured Work</div>',
+                             lambda t: f'<div class="section-eyebrow">{t["work_eyebrow"]}</div>'),
+    ("work_title",           '<h2 class="section-title">Three apps. One obsession with polish.</h2>',
+                             lambda t: f'<h2 class="section-title">{t["work_title"]}</h2>'),
+
+    # About section
+    ("about_eyebrow",        '<div class="section-eyebrow">About</div>',
+                             lambda t: f'<div class="section-eyebrow">{t["about_eyebrow"]}</div>'),
+    ("about_title",          '<h2 class="section-title">A maker who sweats the details.</h2>',
+                             lambda t: f'<h2 class="section-title">{t["about_title"]}</h2>'),
+    ("about_p1_html",        "I'm Ziyad — a solo iOS developer based in Saudi Arabia. I design, build, and ship apps end-to-end. My first app, <strong>Color Number Match</strong>, is on the App Store today with 2,000+ levels and translations into 25 languages. Two more — <strong>Echoes</strong> and <strong>Block Blaster</strong> — are on the way.",
+                             lambda t: t["about_p1_html"]),
+    ("about_p2",             "What I care about is the small stuff: haptics that feel intentional, animations with a reason for being there, translations that read like a person wrote them. That's where I spend my time.",
+                             lambda t: t["about_p2"]),
+
+    # Principles section header
+    ("principles_eyebrow",   '<div class="section-eyebrow">Principles</div>',
+                             lambda t: f'<div class="section-eyebrow">{t["principles_eyebrow"]}</div>'),
+    ("principles_title",     '<h2 class="section-title">How I work</h2>',
+                             lambda t: f'<h2 class="section-title">{t["principles_title"]}</h2>'),
+
+    # Principle 1
+    ("principle_1_title",    '<h3>Solo by choice</h3>',
+                             lambda t: f'<h3>{t["principle_1_title"]}</h3>'),
+    ("principle_1_copy",     "One brain, one vision. It's slower than a team — and that's the point. Every decision stays intact from sketch to ship.",
+                             lambda t: t["principle_1_copy"]),
+    # Principle 2
+    ("principle_2_title",    '<h3>Polish or wait</h3>',
+                             lambda t: f'<h3>{t["principle_2_title"]}</h3>'),
+    ("principle_2_copy",     "A screen isn't done until it feels right. If the haptics aren't there, it isn't shipping. Deadlines move; the bar doesn't.",
+                             lambda t: t["principle_2_copy"]),
+    # Principle 3
+    ("principle_3_title",    '<h3>Localization, not translation</h3>',
+                             lambda t: f'<h3>{t["principle_3_title"]}</h3>'),
+    ("principle_3_copy",     "25 languages, proofread by humans. Arabic is the test case, never the afterthought — proper RTL, native typography, real context.",
+                             lambda t: t["principle_3_copy"]),
+    # Principle 4
+    ("principle_4_title",    '<h3>Small surface, deep work</h3>',
+                             lambda t: f'<h3>{t["principle_4_title"]}</h3>'),
+    ("principle_4_copy",     "I'd rather you remember one interaction than count a hundred features. Fewer things, done with care, beats more things rushed.",
+                             lambda t: t["principle_4_copy"]),
+
+    # Contact section
+    ("contact_title",        '<h2 class="contact-title">Let\'s build something.</h2>',
+                             lambda t: f'<h2 class="contact-title">{t["contact_title"]}</h2>'),
+    ("contact_sub",          '<p class="contact-sub">Open to freelance, collaborations, and quiet chats about indie iOS development. I read everything.</p>',
+                             lambda t: f'<p class="contact-sub">{t["contact_sub"]}</p>'),
 ]
 
 # For cross-page links we want to remain absolute (they already are: /echoes/ etc.)
@@ -508,15 +593,37 @@ def build_translations_dict(code: str) -> dict:
     return {k: v.get(code, v["en"]) for k, v in T.items()}
 
 
+def update_selected_option(html: str, code: str) -> str:
+    """Update the <select> in the existing lang-switcher so the option matching
+    this locale is marked selected. Called on every locale — the English source
+    starts with value="/" selected, so we strip and reapply every run."""
+    # Strip any existing selected attribute on options inside .lang-switcher
+    html = re.sub(
+        r'(<option value="[^"]+")\s+selected(\s*>)',
+        r'\1\2',
+        html,
+    )
+    # Add selected to the target option
+    target_value = "/" if code == "en" else f"/{code}/"
+    pattern = re.compile(r'(<option value="' + re.escape(target_value) + r'")(>)')
+    html = pattern.sub(r'\1 selected\2', html, count=1)
+    return html
+
+
 def localize(src: str, code: str, direction: str) -> str:
-    """Produce the localized HTML for a single language."""
+    """Produce the localized HTML for a single language.
+
+    The source index.html already contains the sticky topbar, baked-in
+    hreflang block, language switcher markup, and inline CSS — this function
+    only needs to swap text strings, update meta tags, and re-flag the
+    correct <option> as selected."""
     t = build_translations_dict(code)
     html = src
 
     # 1) Set <html lang="..." dir="...">
     html = re.sub(r'<html\s+lang="[^"]*"[^>]*>', f'<html lang="{code}" dir="{direction}">', html, count=1)
 
-    # 2) Set the canonical URL to the localized page
+    # 2) Set the canonical URL + og:url + og:locale to the localized page
     canonical = "https://ixsuper.github.io/" if code == "en" else f"https://ixsuper.github.io/{code}/"
     html = re.sub(r'<link rel="canonical" href="[^"]+">', f'<link rel="canonical" href="{canonical}">', html, count=1)
     html = re.sub(r'<meta property="og:url" content="[^"]+">', f'<meta property="og:url" content="{canonical}">', html, count=1)
@@ -528,16 +635,8 @@ def localize(src: str, code: str, direction: str) -> str:
         if needle in html:
             html = html.replace(needle, replacement)
 
-    # 4) Inject hreflang block right after <link rel="canonical" ...>
-    canon_re = re.compile(r'(<link rel="canonical" href="[^"]+">)')
-    html = canon_re.sub(lambda m: m.group(1) + "\n" + hreflang_block(), html, count=1)
-
-    # 5) Inject language switcher CSS right before </style> (first occurrence)
-    html = html.replace('</style>', LANG_SWITCHER_CSS + '    </style>', 1)
-
-    # 6) Inject the language switcher markup immediately after <body>
-    body_re = re.compile(r'(<body[^>]*>)')
-    html = body_re.sub(lambda m: m.group(1) + "\n" + language_switcher(code), html, count=1)
+    # 4) Update the lang-switcher <option selected>
+    html = update_selected_option(html, code)
 
     return html
 
