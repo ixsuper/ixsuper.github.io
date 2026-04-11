@@ -258,6 +258,13 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            border-radius: 24px;
+            z-index: 2;
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+            transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .app-card:hover .graphic-img {
+            transform: scale(1.03);
         }
 
         .graphic-art {
@@ -612,9 +619,9 @@
             <!-- ============ Echoes ============ -->
             <article class="app-card">
                 <div class="graphic echoes">
-                    <!-- IMAGE SWAP: replace the two divs below with <img class="graphic-img" src="/assets/echoes-hero.webp" alt="Echoes hero"> -->
+                    <!-- Fallback gradient art behind the image in case the asset is missing -->
                     <div class="graphic-art"></div>
-                    <span class="graphic-emoji" aria-hidden="true">&#x1F30D;</span>
+                    <img class="graphic-img" src="/assets/echoes-hero.jpg" alt="Echoes: a glowing glass sphere filled with memories floating above a city at twilight" loading="lazy" decoding="async">
                 </div>
                 <div class="info">
                     <div class="badge-row">
