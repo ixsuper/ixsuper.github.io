@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Color Number Match — Release Notes</title>
+        <link>https://ixsuper.github.io/colornumbermatch/changelog</link>
+        <atom:link href="https://ixsuper.github.io/colornumbermatch/feed.xml" rel="self" type="application/rss+xml"/>
+        <description>Version history and release notes for Color Number Match, a vibrant iOS puzzle game by Ziyad Alsuhaymi.</description>
+        <language>en-us</language>
+        <copyright>© 2025–2026 Ziyad Alsuhaymi</copyright>
+        <managingEditor>alsuhaymiziyad@gmail.com (Ziyad Alsuhaymi)</managingEditor>
+        <webMaster>alsuhaymiziyad@gmail.com (Ziyad Alsuhaymi)</webMaster>
+        <lastBuildDate>Sat, 11 Apr 2026 00:00:00 +0000</lastBuildDate>
+        <pubDate>Sat, 11 Apr 2026 00:00:00 +0000</pubDate>
+        <category>Games</category>
+        <category>iOS</category>
+        <image>
+            <url>https://ixsuper.github.io/assets/color-number-match-hero.jpg</url>
+            <title>Color Number Match — Release Notes</title>
+            <link>https://ixsuper.github.io/colornumbermatch/changelog</link>
+        </image>
+
+        <item>
+            <title>v1.2 — Engagement Update</title>
+            <link>https://ixsuper.github.io/colornumbermatch/changelog#v1-2</link>
+            <guid isPermaLink="false">com.colornumbermatch.release.1.2</guid>
+            <pubDate>Sat, 11 Apr 2026 00:00:00 +0000</pubDate>
+            <dc:creator>Ziyad Alsuhaymi</dc:creator>
+            <category>Major Release</category>
+            <description><![CDATA[
+                <p>The Engagement Update focuses on polish, monetization, and depth.</p>
+                <h3>Added</h3>
+                <ul>
+                    <li>Special Tiles — Bomb, Rainbow, and Frozen variants woven into level generation.</li>
+                    <li>Metal shader effects — dissolve, ripple, shimmer, combo glow, frosted glass, rainbow cycle (with graceful fallback).</li>
+                    <li>CoreHaptics manager with bespoke patterns for every game event.</li>
+                    <li>Watch Ad for +3 Moves — opt-in rewarded ad before game over.</li>
+                    <li>Push notifications — daily challenge, streak reminder, lives-full, inactivity.</li>
+                    <li>20 Game Center achievements.</li>
+                    <li>Expanded palette: 4 new colors (Indigo, Mint, Brown, Coral) and numbers up to 9.</li>
+                    <li>Smart rating prompt with 30-day cooldown.</li>
+                    <li>Interactive onboarding covering special tiles.</li>
+                    <li>iPad optimization: two-column layout, 4-column home navigation, sidebar-detail settings.</li>
+                    <li>ProMotion 120Hz support.</li>
+                    <li>Fastlane automation for screenshots and builds.</li>
+                </ul>
+                <h3>Changed</h3>
+                <ul>
+                    <li>Localization grew from 7 to 24 languages.</li>
+                    <li>Level balance refined; beginner pack preserved.</li>
+                    <li>Score display uses spring-animated pop above matched tiles.</li>
+                    <li>Sound and haptic logic split into dedicated managers.</li>
+                </ul>
+                <h3>Fixed</h3>
+                <ul>
+                    <li>Free-reward timer edge cases on app resume.</li>
+                    <li>Tile gradient rendering on older iOS versions.</li>
+                    <li>Rare crash in high-streak combo calculation.</li>
+                </ul>
+            ]]></description>
+        </item>
+
+        <item>
+            <title>v1.1</title>
+            <link>https://ixsuper.github.io/colornumbermatch/changelog#v1-1</link>
+            <guid isPermaLink="false">com.colornumbermatch.release.1.1</guid>
+            <pubDate>Wed, 04 Mar 2026 00:00:00 +0000</pubDate>
+            <dc:creator>Ziyad Alsuhaymi</dc:creator>
+            <category>Minor Release</category>
+            <description><![CDATA[
+                <p>Monetization and polish release.</p>
+                <ul>
+                    <li>Dark and light mode support.</li>
+                    <li>Background music system.</li>
+                    <li>Daily streak tracking.</li>
+                    <li>Google AdMob integration (interstitial and rewarded).</li>
+                    <li>Game Center leaderboards.</li>
+                    <li>Retro UI theme refresh.</li>
+                </ul>
+            ]]></description>
+        </item>
+
+        <item>
+            <title>v1.0 — Initial Release</title>
+            <link>https://ixsuper.github.io/colornumbermatch/changelog#v1-0</link>
+            <guid isPermaLink="false">com.colornumbermatch.release.1.0</guid>
+            <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
+            <dc:creator>Ziyad Alsuhaymi</dc:creator>
+            <category>Launch</category>
+            <description><![CDATA[
+                <p>Color Number Match launches on the App Store.</p>
+                <ul>
+                    <li>2000+ puzzle levels across 10 packs.</li>
+                    <li>Match by color, number, or both.</li>
+                    <li>Coin economy and power-ups.</li>
+                    <li>In-app purchases (ad removal, coin packs, unlimited lives).</li>
+                    <li>Launch with 7 languages: English, Arabic, Spanish, French, German, Simplified Chinese, Japanese.</li>
+                </ul>
+            ]]></description>
+        </item>
+    </channel>
+</rss>

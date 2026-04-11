@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="sv" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Number Match — Colorful Puzzle Game for iOS</title>
+    <meta name="description" content="Color Number Match — a vibrant puzzle game with 2000+ levels, special tiles, 24 languages, and Game Center leaderboards. Free on the App Store.">
+    <meta name="keywords" content="puzzle game, match game, color matching, number matching, iOS puzzle, color number match">
+    <meta name="author" content="Ziyad Alsuhaymi">
+    <meta name="theme-color" content="#0f1128" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f5f6ff" media="(prefers-color-scheme: light)">
+    <meta name="color-scheme" content="dark light">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Color Number Match">
+    <meta property="og:description" content="Match Colors &amp; Numbers! 2000+ levels, special tiles, 24 languages. Free on the App Store.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ixsuper.github.io/sv/colornumbermatch/">
+    <meta property="og:site_name" content="Ziyad Alsuhaymi">
+    <meta property="og:image" content="https://ixsuper.github.io/assets/color-number-match-hero.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1200">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@thesuper_hunter">
+    <meta name="twitter:creator" content="@thesuper_hunter">
+    <meta name="twitter:title" content="Color Number Match">
+    <meta name="twitter:description" content="A vibrant puzzle game with 2000+ levels, special tiles, and 24 languages.">
+    <meta name="twitter:image" content="https://ixsuper.github.io/assets/color-number-match-hero.jpg">
+
+    <link rel="canonical" href="https://ixsuper.github.io/sv/colornumbermatch/">
+    <link rel="alternate" hreflang="en" href="https://ixsuper.github.io/colornumbermatch/">
+    <link rel="alternate" hreflang="ar" href="https://ixsuper.github.io/ar/colornumbermatch/">
+    <link rel="alternate" hreflang="da" href="https://ixsuper.github.io/da/colornumbermatch/">
+    <link rel="alternate" hreflang="de" href="https://ixsuper.github.io/de/colornumbermatch/">
+    <link rel="alternate" hreflang="es" href="https://ixsuper.github.io/es/colornumbermatch/">
+    <link rel="alternate" hreflang="fr" href="https://ixsuper.github.io/fr/colornumbermatch/">
+    <link rel="alternate" hreflang="hi" href="https://ixsuper.github.io/hi/colornumbermatch/">
+    <link rel="alternate" hreflang="id" href="https://ixsuper.github.io/id/colornumbermatch/">
+    <link rel="alternate" hreflang="it" href="https://ixsuper.github.io/it/colornumbermatch/">
+    <link rel="alternate" hreflang="ja" href="https://ixsuper.github.io/ja/colornumbermatch/">
+    <link rel="alternate" hreflang="ko" href="https://ixsuper.github.io/ko/colornumbermatch/">
+    <link rel="alternate" hreflang="ms" href="https://ixsuper.github.io/ms/colornumbermatch/">
+    <link rel="alternate" hreflang="nb" href="https://ixsuper.github.io/nb/colornumbermatch/">
+    <link rel="alternate" hreflang="nl" href="https://ixsuper.github.io/nl/colornumbermatch/">
+    <link rel="alternate" hreflang="pl" href="https://ixsuper.github.io/pl/colornumbermatch/">
+    <link rel="alternate" hreflang="pt" href="https://ixsuper.github.io/pt/colornumbermatch/">
+    <link rel="alternate" hreflang="ru" href="https://ixsuper.github.io/ru/colornumbermatch/">
+    <link rel="alternate" hreflang="sv" href="https://ixsuper.github.io/sv/colornumbermatch/">
+    <link rel="alternate" hreflang="th" href="https://ixsuper.github.io/th/colornumbermatch/">
+    <link rel="alternate" hreflang="tr" href="https://ixsuper.github.io/tr/colornumbermatch/">
+    <link rel="alternate" hreflang="uk" href="https://ixsuper.github.io/uk/colornumbermatch/">
+    <link rel="alternate" hreflang="ur" href="https://ixsuper.github.io/ur/colornumbermatch/">
+    <link rel="alternate" hreflang="vi" href="https://ixsuper.github.io/vi/colornumbermatch/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://ixsuper.github.io/zh-Hans/colornumbermatch/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://ixsuper.github.io/zh-Hant/colornumbermatch/">
+    <link rel="alternate" hreflang="x-default" href="https://ixsuper.github.io/colornumbermatch/">
+    <link rel="alternate" hreflang="en" href="https://ixsuper.github.io/colornumbermatch/">
+    <link rel="alternate" hreflang="ar" href="https://ixsuper.github.io/ar/colornumbermatch/">
+    <link rel="alternate" hreflang="da" href="https://ixsuper.github.io/da/colornumbermatch/">
+    <link rel="alternate" hreflang="de" href="https://ixsuper.github.io/de/colornumbermatch/">
+    <link rel="alternate" hreflang="es" href="https://ixsuper.github.io/es/colornumbermatch/">
+    <link rel="alternate" hreflang="fr" href="https://ixsuper.github.io/fr/colornumbermatch/">
+    <link rel="alternate" hreflang="hi" href="https://ixsuper.github.io/hi/colornumbermatch/">
+    <link rel="alternate" hreflang="id" href="https://ixsuper.github.io/id/colornumbermatch/">
+    <link rel="alternate" hreflang="it" href="https://ixsuper.github.io/it/colornumbermatch/">
+    <link rel="alternate" hreflang="ja" href="https://ixsuper.github.io/ja/colornumbermatch/">
+    <link rel="alternate" hreflang="ko" href="https://ixsuper.github.io/ko/colornumbermatch/">
+    <link rel="alternate" hreflang="ms" href="https://ixsuper.github.io/ms/colornumbermatch/">
+    <link rel="alternate" hreflang="nb" href="https://ixsuper.github.io/nb/colornumbermatch/">
+    <link rel="alternate" hreflang="nl" href="https://ixsuper.github.io/nl/colornumbermatch/">
+    <link rel="alternate" hreflang="pl" href="https://ixsuper.github.io/pl/colornumbermatch/">
+    <link rel="alternate" hreflang="pt" href="https://ixsuper.github.io/pt/colornumbermatch/">
+    <link rel="alternate" hreflang="ru" href="https://ixsuper.github.io/ru/colornumbermatch/">
+    <link rel="alternate" hreflang="sv" href="https://ixsuper.github.io/sv/colornumbermatch/">
+    <link rel="alternate" hreflang="th" href="https://ixsuper.github.io/th/colornumbermatch/">
+    <link rel="alternate" hreflang="tr" href="https://ixsuper.github.io/tr/colornumbermatch/">
+    <link rel="alternate" hreflang="uk" href="https://ixsuper.github.io/uk/colornumbermatch/">
+    <link rel="alternate" hreflang="ur" href="https://ixsuper.github.io/ur/colornumbermatch/">
+    <link rel="alternate" hreflang="vi" href="https://ixsuper.github.io/vi/colornumbermatch/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://ixsuper.github.io/zh-Hans/colornumbermatch/">
+    <link rel="alternate" hreflang="zh-Hant" href="https://ixsuper.github.io/zh-Hant/colornumbermatch/">
+    <link rel="alternate" hreflang="x-default" href="https://ixsuper.github.io/colornumbermatch/">
+    <link rel="alternate" type="application/rss+xml" title="Color Number Match — Release Notes" href="https://ixsuper.github.io/colornumbermatch/feed.xml">
+    <link rel="preload" as="image" href="/assets/color-number-match-hero.webp" type="image/webp" fetchpriority="high">
+
+    <link rel="stylesheet" href="/assets/app.css">
+    <style>
+        :root {
+            --accent-1: #8b5cf6;
+            --accent-2: #ec4899;
+            --accent-3: #38bdf8;
+        }
+    
+        /* ============ Language switcher ============ */
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px 8px 12px;
+            background: var(--card-bg, rgba(12, 16, 38, 0.55));
+            border: 1px solid var(--border, rgba(255, 255, 255, 0.1));
+            border-radius: 100px;
+            backdrop-filter: blur(20px) saturate(140%);
+            -webkit-backdrop-filter: blur(20px) saturate(140%);
+            color: var(--text, #fff);
+            font-size: 0.85em;
+            font-weight: 500;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .lang-switcher .lang-icon {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+            opacity: 0.7;
+        }
+        .lang-switcher select {
+            background: transparent;
+            border: none;
+            color: currentColor;
+            font: inherit;
+            cursor: pointer;
+            outline: none;
+            padding-right: 4px;
+            appearance: none;
+            -webkit-appearance: none;
+            max-width: 140px;
+        }
+        .lang-switcher select option {
+            background: #0a0e22;
+            color: #fff;
+        }
+        html[dir="rtl"] .lang-switcher {
+            right: auto;
+            left: 20px;
+        }
+        @media (max-width: 500px) {
+            .lang-switcher { top: 12px; right: 12px; padding: 6px 12px; font-size: 0.8em; }
+            .lang-switcher select { max-width: 100px; }
+            html[dir="rtl"] .lang-switcher { right: auto; left: 12px; }
+        }
+    
+        /* ============ Language switcher ============ */
+        .lang-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px 8px 12px;
+            background: var(--card-bg, rgba(12, 16, 38, 0.55));
+            border: 1px solid var(--border, rgba(255, 255, 255, 0.1));
+            border-radius: 100px;
+            backdrop-filter: blur(20px) saturate(140%);
+            -webkit-backdrop-filter: blur(20px) saturate(140%);
+            color: var(--text, #fff);
+            font-size: 0.85em;
+            font-weight: 500;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .lang-switcher .lang-icon {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+            opacity: 0.7;
+        }
+        .lang-switcher select {
+            background: transparent;
+            border: none;
+            color: currentColor;
+            font: inherit;
+            cursor: pointer;
+            outline: none;
+            padding-right: 4px;
+            appearance: none;
+            -webkit-appearance: none;
+            max-width: 140px;
+        }
+        .lang-switcher select option {
+            background: #0a0e22;
+            color: #fff;
+        }
+        html[dir="rtl"] .lang-switcher {
+            right: auto;
+            left: 20px;
+        }
+        @media (max-width: 500px) {
+            .lang-switcher { top: 12px; right: 12px; padding: 6px 12px; font-size: 0.8em; }
+            .lang-switcher select { max-width: 100px; }
+            html[dir="rtl"] .lang-switcher { right: auto; left: 12px; }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "Color Number Match",
+        "operatingSystem": "iOS",
+        "applicationCategory": "GameApplication",
+        "genre": ["Puzzle", "Casual"],
+        "description": "A vibrant puzzle game where you match tiles by color, number, or both. 2000+ levels, special tiles, Metal shader effects, CoreHaptics, and full localization for 24 languages including Arabic RTL.",
+        "url": "https://ixsuper.github.io/colornumbermatch/",
+        "image": "https://ixsuper.github.io/assets/color-number-match-hero.jpg",
+        "softwareVersion": "1.2",
+        "datePublished": "2025-11-01",
+        "inLanguage": ["en", "ar", "zh-Hans", "zh-Hant", "da", "nl", "fr", "de", "hi", "id", "it", "ja", "ko", "ms", "nb", "pl", "pt", "ru", "es", "sv", "th", "tr", "uk", "vi"],
+        "author": {
+            "@type": "Person",
+            "name": "Ziyad Alsuhaymi",
+            "url": "https://ixsuper.github.io/"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "downloadUrl": "https://apps.apple.com/app/id6761441678",
+        "installUrl": "https://apps.apple.com/app/id6761441678"
+    }
+    </script>
+</head>
+<body>
+        <div class="lang-switcher" aria-label="Språk">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="lang-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41C19.07 5.78 20 8.83 20 12c0 1.94-.48 3.75-1.3 5.39h-.8z"/></svg>
+            <select onchange="window.location.href=this.value" aria-label="Språk">
+                <option value="/colornumbermatch/">English</option>
+                <option value="/ar/colornumbermatch/">العربية</option>
+                <option value="/da/colornumbermatch/">Dansk</option>
+                <option value="/de/colornumbermatch/">Deutsch</option>
+                <option value="/es/colornumbermatch/">Español</option>
+                <option value="/fr/colornumbermatch/">Français</option>
+                <option value="/hi/colornumbermatch/">हिन्दी</option>
+                <option value="/id/colornumbermatch/">Bahasa Indonesia</option>
+                <option value="/it/colornumbermatch/">Italiano</option>
+                <option value="/ja/colornumbermatch/">日本語</option>
+                <option value="/ko/colornumbermatch/">한국어</option>
+                <option value="/ms/colornumbermatch/">Bahasa Melayu</option>
+                <option value="/nb/colornumbermatch/">Norsk Bokmål</option>
+                <option value="/nl/colornumbermatch/">Nederlands</option>
+                <option value="/pl/colornumbermatch/">Polski</option>
+                <option value="/pt/colornumbermatch/">Português</option>
+                <option value="/ru/colornumbermatch/">Русский</option>
+                <option value="/sv/colornumbermatch/" selected>Svenska</option>
+                <option value="/th/colornumbermatch/">ไทย</option>
+                <option value="/tr/colornumbermatch/">Türkçe</option>
+                <option value="/uk/colornumbermatch/">Українська</option>
+                <option value="/ur/colornumbermatch/">اردو</option>
+                <option value="/vi/colornumbermatch/">Tiếng Việt</option>
+                <option value="/zh-Hans/colornumbermatch/">简体中文</option>
+                <option value="/zh-Hant/colornumbermatch/">繁體中文</option>
+            </select>
+        </div>
+
+        <div class="lang-switcher" aria-label="Language">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="lang-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41C19.07 5.78 20 8.83 20 12c0 1.94-.48 3.75-1.3 5.39h-.8z"/></svg>
+            <select onchange="window.location.href=this.value" aria-label="Language">
+                <option value="/colornumbermatch/" selected>English</option>
+                <option value="/ar/colornumbermatch/">العربية</option>
+                <option value="/da/colornumbermatch/">Dansk</option>
+                <option value="/de/colornumbermatch/">Deutsch</option>
+                <option value="/es/colornumbermatch/">Español</option>
+                <option value="/fr/colornumbermatch/">Français</option>
+                <option value="/hi/colornumbermatch/">हिन्दी</option>
+                <option value="/id/colornumbermatch/">Bahasa Indonesia</option>
+                <option value="/it/colornumbermatch/">Italiano</option>
+                <option value="/ja/colornumbermatch/">日本語</option>
+                <option value="/ko/colornumbermatch/">한국어</option>
+                <option value="/ms/colornumbermatch/">Bahasa Melayu</option>
+                <option value="/nb/colornumbermatch/">Norsk Bokmål</option>
+                <option value="/nl/colornumbermatch/">Nederlands</option>
+                <option value="/pl/colornumbermatch/">Polski</option>
+                <option value="/pt/colornumbermatch/">Português</option>
+                <option value="/ru/colornumbermatch/">Русский</option>
+                <option value="/sv/colornumbermatch/">Svenska</option>
+                <option value="/th/colornumbermatch/">ไทย</option>
+                <option value="/tr/colornumbermatch/">Türkçe</option>
+                <option value="/uk/colornumbermatch/">Українська</option>
+                <option value="/ur/colornumbermatch/">اردو</option>
+                <option value="/vi/colornumbermatch/">Tiếng Việt</option>
+                <option value="/zh-Hans/colornumbermatch/">简体中文</option>
+                <option value="/zh-Hant/colornumbermatch/">繁體中文</option>
+            </select>
+        </div>
+
+    <div class="bg-stage" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <div class="container">
+        <nav class="nav">
+            <a href="/sv/">&larr; Ziyad Alsuhaymi</a>
+            <a href="/colornumbermatch/changelog">Ändringslogg</a>
+        </nav>
+
+        <header class="hero">
+            <span class="hero-badge live">v1.2 · Live on the App Store</span>
+            <h1>Color Number Match</h1>
+            <p class="tagline">Ett livfullt pusselspel där du matchar brickor efter färg, nummer eller båda. 2000+ banor, specialbrickor, Metal shader-effekter, CoreHaptics och full lokalisering till 24 språk inklusive arabiska RTL.</p>
+
+            <div class="cta-row">
+                <a href="https://apps.apple.com/app/id6761441678" class="btn btn-primary">
+                    <svg class="apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.88-3.08.38-1.1-.51-2.1-.54-3.26 0-1.45.71-2.22.51-3.08-.38C1.98 14.84 2.78 6.41 9.05 6.1c1.55.06 2.63.85 3.52.9 1.34-.28 2.63-1.05 4.05-.98 1.72.14 3.02.88 3.86 2.17-3.55 2.15-2.99 6.72.24 8.1-.65 1.65-1.5 3.26-2.67 4zM12.03 6.03c-.17-2.58 1.93-4.69 4.3-4.93.32 2.81-2.47 5.09-4.3 4.93z"/></svg>
+                    Ladda ner på App Store
+                </a>
+                <a href="/colornumbermatch/changelog" class="btn btn-ghost">Utgåvenoteringar</a>
+            </div>
+        </header>
+
+        <div class="hero-image-wrap">
+            <picture>
+                <source srcset="/assets/color-number-match-hero.webp" type="image/webp">
+                <img src="/assets/color-number-match-hero.jpg" alt="Color Number Match gameplay artwork with vibrant tiles" loading="eager" fetchpriority="high" decoding="async">
+            </picture>
+        </div>
+
+        <section class="stats">
+            <div class="stat-item">
+                <div class="stat-num">2000+</div>
+                <div class="stat-label">Nivåer</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">10</div>
+                <div class="stat-label">Paket</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">24</div>
+                <div class="stat-label">Språk</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">20</div>
+                <div class="stat-label">Prestationer</div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <span class="feature-icon" aria-hidden="true">&#x1F3AE;</span>
+                <h3>2000+ banor</h3>
+                <p>10 level packs with progressive difficulty, from beginner warm-ups to expert-level challenges.</p>
+            </div>
+            <div class="feature">
+                <span class="feature-icon" aria-hidden="true">&#x1F4A3;</span>
+                <h3>Specialbrickor</h3>
+                <p>Bomb clears a 3&times;3 area, Rainbow matches any tile, Frozen tiles need multiple matches.</p>
+            </div>
+            <div class="feature">
+                <span class="feature-icon" aria-hidden="true">&#x1F308;</span>
+                <h3>Metal-shaders</h3>
+                <p>GPU-accelerated dissolve, ripple, shimmer, combo glow, frosted glass, and rainbow cycle effects.</p>
+            </div>
+            <div class="feature">
+                <span class="feature-icon" aria-hidden="true">&#x1F4F3;</span>
+                <h3>CoreHaptics</h3>
+                <p>Bespoke haptic patterns for tile select, match, combo, win, loss, and streak milestones.</p>
+            </div>
+            <div class="feature">
+                <span class="feature-icon" aria-hidden="true">&#x1F3C6;</span>
+                <h3>Game Center</h3>
+                <p>20 achievements and global leaderboards. See how you rank against players worldwide.</p>
+            </div>
+            <div class="feature">
+                <span class="feature-icon" aria-hidden="true">&#x1F4C5;</span>
+                <h3>Dagliga utmaningar</h3>
+                <p>New challenges every day with bonus coin rewards and streak multipliers.</p>
+            </div>
+            <div class="feature">
+                <span class="feature-icon" aria-hidden="true">&#x1F310;</span>
+                <h3>24 språk</h3>
+                <p>Full localization including Arabic RTL, Hindi, Thai, Vietnamese, and more.</p>
+            </div>
+            <div class="feature">
+                <span class="feature-icon" aria-hidden="true">&#x267F;</span>
+                <h3>Tillgänglighet</h3>
+                <p>Colorblind mode, VoiceOver, Dynamic Type, and Reduce Motion options.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>What’s New in v1.2 — “Engagement Update”</h2>
+            <ul>
+                <li><strong>Special Tiles</strong> &mdash; Bomb, Rainbow, and Frozen tiles woven into level generation.</li>
+                <li><strong>Metal Shader Effects</strong> &mdash; GPU-accelerated visuals with graceful fallback.</li>
+                <li><strong>CoreHaptics</strong> &mdash; dedicated HapticManager with bespoke patterns.</li>
+                <li><strong>Push Notifications</strong> &mdash; daily challenge, streak, lives-full, and inactivity reminders.</li>
+                <li><strong>Watch Ad for +3 Moves</strong> &mdash; opt-in rewarded ad offer before game over.</li>
+                <li><strong>Game Center Achievements</strong> &mdash; 20 milestones to unlock.</li>
+                <li><strong>24 Languages</strong> &mdash; grew from 7 at launch.</li>
+                <li><strong>iPad Optimization</strong> &mdash; two-column layout, sidebar settings, 4-column home nav.</li>
+            </ul>
+            <p style="margin-top: 16px;"><a href="/colornumbermatch/changelog" style="color: var(--accent-1); font-weight: 600;">View full changelog →</a></p>
+        </section>
+
+        <footer class="site-footer">
+            <div class="footer-links">
+                <a href="/sv/">Home</a>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Use</a>
+                <a href="/colornumbermatch/support">Support</a>
+                <a href="/colornumbermatch/changelog">Changelog</a>
+                <a href="https://x.com/thesuper_hunter">X (Twitter)</a>
+                <a href="mailto:alsuhaymiziyad@gmail.com">Contact</a>
+            </div>
+            <p class="copyright">&copy; 2025&ndash;2026 Ziyad Alsuhaymi. All rights reserved.</p>
+
+            <div class="other-apps">
+                <span class="label">More from Ziyad Alsuhaymi</span>
+                <div class="other-apps-list">
+                    <a href="/sv/block-blaster/">&#x1F4A5; Block Blaster Puzzle</a>
+                    <a href="/sv/echoes/">&#x1F30D; Echoes</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script defer src="/assets/analytics.js"></script>
+</body>
+</html>
