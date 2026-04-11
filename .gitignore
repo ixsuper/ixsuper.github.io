@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor / tooling
+.vscode/
+.idea/
+*.swp
+*~
+
+# Local previews
+node_modules/
