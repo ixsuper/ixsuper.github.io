@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelog · Color Number Match</title>
+    <meta name="description" content="Version history and release notes for Color Number Match by Ziyad Alsuhaymi.">
+    <meta name="theme-color" content="#0f1128" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f5f6ff" media="(prefers-color-scheme: light)">
+    <meta name="color-scheme" content="dark light">
+
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Changelog · Color Number Match">
+    <meta property="og:description" content="Version history and release notes for Color Number Match.">
+    <meta property="og:url" content="https://ixsuper.github.io/colornumbermatch/changelog">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ziyad Alsuhaymi">
+    <meta property="og:image" content="https://ixsuper.github.io/assets/color-number-match-social.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://ixsuper.github.io/assets/color-number-match-social.jpg">
+
+    <link rel="canonical" href="https://ixsuper.github.io/colornumbermatch/changelog">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+            background: #0f1128;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.7;
+            padding: 40px 20px;
+            -webkit-font-smoothing: antialiased;
+        }
+        .container { max-width: 760px; margin: 0 auto; }
+        .back {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9em;
+            text-decoration: none;
+        }
+        .back:hover { color: #fff; }
+
+        h1 {
+            font-size: 2.2em;
+            font-weight: 900;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #4f80ff, #ff5fba, #50dcff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .intro {
+            color: rgba(255,255,255,0.55);
+            margin-bottom: 40px;
+            font-size: 0.95em;
+        }
+
+        .release {
+            margin-bottom: 48px;
+            padding: 28px 28px 24px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+        }
+        .release-header {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+        .version {
+            font-size: 1.5em;
+            font-weight: 800;
+            color: #fff;
+        }
+        .release-date {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9em;
+        }
+        .codename {
+            display: inline-block;
+            padding: 4px 10px;
+            background: rgba(79, 128, 255, 0.2);
+            border: 1px solid rgba(79, 128, 255, 0.4);
+            border-radius: 8px;
+            color: #7eb4ff;
+            font-size: 0.8em;
+            font-weight: 700;
+        }
+        .tagline {
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-size: 0.85em;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 24px;
+            margin-bottom: 12px;
+            color: #7eb4ff;
+        }
+        .section-added h3 { color: #50dcff; }
+        .section-changed h3 { color: #ffaa5f; }
+        .section-fixed h3 { color: #5fff9e; }
+        .section-security h3 { color: #ff5fba; }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            color: rgba(255,255,255,0.78);
+            font-size: 0.95em;
+        }
+        li::before {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 12px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: rgba(126, 180, 255, 0.6);
+        }
+        li strong { color: #fff; font-weight: 700; }
+
+        .build-info {
+            margin-top: 20px;
+            padding: 14px 16px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            font-family: 'SF Mono', Menlo, Consolas, monospace;
+            font-size: 0.85em;
+            color: rgba(255,255,255,0.6);
+        }
+        .build-info span { color: #7eb4ff; }
+
+        a { color: #7eb4ff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .footer-link {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/colornumbermatch/" class="back">&larr; Back to Color Number Match</a>
+        <h1>Changelog</h1>
+        <p class="intro">All notable changes to <strong>Color Number Match</strong>. The format follows Keep a Changelog and the project adheres to Semantic Versioning.</p>
+
+        <!-- ======= v1.2 ======= -->
+        <article class="release">
+            <div class="release-header">
+                <span class="version">1.2</span>
+                <span class="release-date">April 11, 2026</span>
+                <span class="codename">Engagement Update</span>
+            </div>
+            <p class="tagline">The biggest update yet: special tiles, Metal shader effects, CoreHaptics, push notifications, Game Center achievements, rewarded ads for extra moves, a 4-color expansion, iPad polish, and full localization for 24 languages.</p>
+
+            <div class="section-added">
+                <h3>Added</h3>
+                <ul>
+                    <li><strong>Special Tiles</strong> — Bomb (clears a 3&times;3 area), Rainbow (matches any tile), and Frozen (requires multiple matches to break).</li>
+                    <li><strong>Metal Shader Effects</strong> — dissolve, ripple, shimmer, combo glow, frosted glass, and rainbow cycle with graceful fallback on non-Metal devices.</li>
+                    <li><strong>CoreHaptics Manager</strong> — bespoke patterns for tile select, tile match, combo escalation, invalid match, bomb explosion, freeze activate, win celebration, loss feedback, and streak milestones.</li>
+                    <li><strong>Watch Ad for +3 Moves</strong> — opt-in rewarded ad offer before game over, once per round, easily declined.</li>
+                    <li><strong>Push Notifications</strong> — daily challenge, streak reminder, lives-full, and inactivity reminders (all opt-in).</li>
+                    <li><strong>20 Game Center Achievements</strong> — first win, wins milestones, combos, streaks, perfect rounds, daily challenges, stars, and level milestones.</li>
+                    <li><strong>Expanded Palette</strong> — 4 new colors (Indigo, Mint, Brown, Coral) and numbers up to 9 in higher-difficulty packs.</li>
+                    <li><strong>Glass Morphism UI</strong> — new glassCard, glassButton, and glassBackground modifiers across all views.</li>
+                    <li><strong>Smart Rating Prompt</strong> — context-aware trigger shown after a strong finish with a 30-day cooldown.</li>
+                    <li><strong>Interactive Onboarding</strong> — tutorial covers special tiles, with TipKit hints for Bomb, Rainbow, Frozen, and the continue-ad offer.</li>
+                    <li><strong>iPad Optimization</strong> — two-column regular-width game layout, 4-column home navigation, sidebar-detail settings.</li>
+                    <li><strong>ProMotion 120Hz</strong> — high-refresh-rate animation enabled on supported devices.</li>
+                    <li><strong>Fastlane</strong> — automated screenshots, frameit, and App Store build lanes.</li>
+                </ul>
+            </div>
+
+            <div class="section-changed">
+                <h3>Changed</h3>
+                <ul>
+                    <li><strong>Localization</strong> — grew from 7 to 24 languages: English, Arabic, German, Spanish, French, Hindi, Indonesian, Italian, Japanese, Korean, Malay, Norwegian Bokm&aring;l, Dutch, Polish, Portuguese, Russian, Swedish, Thai, Turkish, Ukrainian, Vietnamese, Simplified Chinese, Traditional Chinese, Danish.</li>
+                    <li><strong>Level Balance</strong> — beginner pack (1&ndash;200) preserved; special tiles and new colors phased into Easy, Medium, and Hard packs.</li>
+                    <li><strong>Score Display</strong> — now uses a spring-animated score pop that rises above matched tiles.</li>
+                    <li><strong>Sound + Haptic Split</strong> — SoundManager delegates all haptic calls to the new HapticManager singleton.</li>
+                    <li><strong>Tile Rendering</strong> — TileView is Equatable to avoid unnecessary redraws.</li>
+                </ul>
+            </div>
+
+            <div class="section-fixed">
+                <h3>Fixed</h3>
+                <ul>
+                    <li>Free-reward timer edge cases on app resume.</li>
+                    <li>Tile gradient rendering on older iOS versions.</li>
+                    <li>Rare crash in combo-chain calculation at high streak multipliers.</li>
+                </ul>
+            </div>
+
+            <div class="section-security">
+                <h3>Security &amp; Privacy</h3>
+                <ul>
+                    <li>No new sensitive data collected. AdMob and Game Center usage unchanged and disclosed in the <a href="/privacy">Privacy Policy</a>.</li>
+                    <li>Push notifications are opt-in; permission is requested on first launch after the tutorial.</li>
+                    <li>Export compliance: HTTPS-only, exempt under Category 5, Part 2.</li>
+                </ul>
+            </div>
+
+            <div class="build-info">
+                <span>Marketing Version</span> 1.2 &nbsp; &middot; &nbsp;
+                <span>Build</span> 6 &nbsp; &middot; &nbsp;
+                <span>Minimum iOS</span> 17.0 &nbsp; &middot; &nbsp;
+                <span>Xcode</span> 16.0+
+            </div>
+        </article>
+
+        <!-- ======= v1.1 ======= -->
+        <article class="release">
+            <div class="release-header">
+                <span class="version">1.1</span>
+                <span class="release-date">March 2026</span>
+                <span class="codename">Polish Update</span>
+            </div>
+
+            <div class="section-added">
+                <h3>Added</h3>
+                <ul>
+                    <li>Dark and light mode support.</li>
+                    <li>Background music system.</li>
+                    <li>Daily streak tracking.</li>
+                    <li>Google AdMob integration (interstitial + rewarded).</li>
+                    <li>Game Center leaderboards.</li>
+                    <li>Retro UI theme refresh.</li>
+                </ul>
+            </div>
+        </article>
+
+        <!-- ======= v1.0 ======= -->
+        <article class="release">
+            <div class="release-header">
+                <span class="version">1.0</span>
+                <span class="release-date">February 2026</span>
+                <span class="codename">Initial Release</span>
+            </div>
+
+            <div class="section-added">
+                <h3>Added</h3>
+                <ul>
+                    <li>2000+ puzzle levels across 10 level packs.</li>
+                    <li>Match by color, number, or both.</li>
+                    <li>Coin economy and power-ups.</li>
+                    <li>In-app purchases (ad removal, coin packs, unlimited lives).</li>
+                    <li>Initial 7 languages: English, Arabic, Spanish, French, German, Simplified Chinese, Japanese.</li>
+                </ul>
+            </div>
+        </article>
+
+        <p class="footer-link">
+            <a href="/colornumbermatch/">&larr; Back to Color Number Match</a> &nbsp;&middot;&nbsp;
+            <a href="/">Home</a> &nbsp;&middot;&nbsp;
+            <a href="https://apps.apple.com/app/id6761441678">Download on the App Store</a>
+        </p>
+    </div>
+</body>
+</html>
