@@ -1,13 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-    <!-- Homepage -->
+    <!-- Homepage (English + 24 localized alternates) -->
     <url>
         <loc>https://ixsuper.github.io/</loc>
         <lastmod>2026-04-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://ixsuper.github.io/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://ixsuper.github.io/ar/"/>
+        <xhtml:link rel="alternate" hreflang="da" href="https://ixsuper.github.io/da/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://ixsuper.github.io/de/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://ixsuper.github.io/es/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://ixsuper.github.io/fr/"/>
+        <xhtml:link rel="alternate" hreflang="hi" href="https://ixsuper.github.io/hi/"/>
+        <xhtml:link rel="alternate" hreflang="id" href="https://ixsuper.github.io/id/"/>
+        <xhtml:link rel="alternate" hreflang="it" href="https://ixsuper.github.io/it/"/>
+        <xhtml:link rel="alternate" hreflang="ja" href="https://ixsuper.github.io/ja/"/>
+        <xhtml:link rel="alternate" hreflang="ko" href="https://ixsuper.github.io/ko/"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://ixsuper.github.io/ms/"/>
+        <xhtml:link rel="alternate" hreflang="nb" href="https://ixsuper.github.io/nb/"/>
+        <xhtml:link rel="alternate" hreflang="nl" href="https://ixsuper.github.io/nl/"/>
+        <xhtml:link rel="alternate" hreflang="pl" href="https://ixsuper.github.io/pl/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://ixsuper.github.io/pt/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://ixsuper.github.io/ru/"/>
+        <xhtml:link rel="alternate" hreflang="sv" href="https://ixsuper.github.io/sv/"/>
+        <xhtml:link rel="alternate" hreflang="th" href="https://ixsuper.github.io/th/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://ixsuper.github.io/tr/"/>
+        <xhtml:link rel="alternate" hreflang="uk" href="https://ixsuper.github.io/uk/"/>
+        <xhtml:link rel="alternate" hreflang="ur" href="https://ixsuper.github.io/ur/"/>
+        <xhtml:link rel="alternate" hreflang="vi" href="https://ixsuper.github.io/vi/"/>
+        <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://ixsuper.github.io/zh-Hans/"/>
+        <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://ixsuper.github.io/zh-Hant/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://ixsuper.github.io/"/>
         <image:image>
             <image:loc>https://ixsuper.github.io/assets/color-number-match-hero.jpg</image:loc>
             <image:title>Ziyad Alsuhaymi — iOS Apps Portfolio</image:title>
