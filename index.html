@@ -619,9 +619,10 @@
             <!-- ============ Echoes ============ -->
             <article class="app-card">
                 <div class="graphic echoes">
-                    <!-- Fallback gradient art behind the image in case the asset is missing -->
+                    <!-- Fallback CSS art always renders; the <img> appears on top only if it successfully loads -->
                     <div class="graphic-art"></div>
-                    <img class="graphic-img" src="/assets/echoes-hero.jpg" alt="Echoes: a glowing glass sphere filled with memories floating above a city at twilight" loading="lazy" decoding="async">
+                    <span class="graphic-emoji" aria-hidden="true">&#x1F30D;</span>
+                    <img class="graphic-img" src="/assets/echoes-hero.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()">
                 </div>
                 <div class="info">
                     <div class="badge-row">
@@ -643,9 +644,10 @@
             <!-- ============ Block Blaster Puzzle ============ -->
             <article class="app-card">
                 <div class="graphic blocks">
-                    <!-- Fallback gradient art behind the image in case the asset is missing -->
+                    <!-- Fallback CSS art always renders; the <img> appears on top only if it successfully loads -->
                     <div class="graphic-art"></div>
-                    <img class="graphic-img" src="/assets/block-blaster-hero.jpg" alt="Block Blaster Puzzle: a glass-tile grid mid-explosion with prismatic rainbow refraction" loading="lazy" decoding="async">
+                    <span class="graphic-emoji" aria-hidden="true">&#x1F4A5;</span>
+                    <img class="graphic-img" src="/assets/block-blaster-hero.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()">
                 </div>
                 <div class="info">
                     <div class="badge-row">
@@ -669,9 +671,10 @@
             <!-- ============ Color Number Match ============ -->
             <article class="app-card">
                 <div class="graphic colors">
-                    <!-- Fallback gradient art behind the image in case the asset is missing -->
+                    <!-- Fallback CSS art always renders; the <img> appears on top only if it successfully loads -->
                     <div class="graphic-art"></div>
-                    <img class="graphic-img" src="/assets/color-number-match-hero.jpg" alt="Color Number Match: a glowing isometric cube of numbered candy-glass tiles mid-match, dissolving into sparkles" loading="lazy" decoding="async">
+                    <span class="graphic-emoji" aria-hidden="true">&#x1F522;</span>
+                    <img class="graphic-img" src="/assets/color-number-match-hero.jpg" alt="" loading="lazy" decoding="async" onerror="this.remove()">
                 </div>
                 <div class="info">
                     <div class="badge-row">
