@@ -138,10 +138,8 @@ body {
     z-index: 90;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 20px;
     padding: 14px 28px;
-    padding-inline-end: 180px;
     background: var(--glass, rgba(12, 16, 38, 0.6));
     backdrop-filter: blur(22px) saturate(150%);
     -webkit-backdrop-filter: blur(22px) saturate(150%);
@@ -177,6 +175,7 @@ body {
     gap: 26px;
     font-size: 0.9em;
     font-weight: 500;
+    margin-inline-start: auto;
 }
 .topbar-links a {
     color: var(--text-muted, rgba(255, 255, 255, 0.6));
@@ -201,16 +200,12 @@ body {
     border-radius: 2px;
     background: linear-gradient(90deg, var(--accent-1, #4f80ff), var(--accent-3, #50dcff));
 }
-html[dir="rtl"] .topbar {
-    padding-inline-end: 180px;
-}
 @media (max-width: 720px) {
-    .topbar { padding: 10px 16px; padding-inline-end: 150px; gap: 12px; }
+    .topbar { padding: 10px 16px; gap: 12px; }
     .topbar-name { display: none; }
     .topbar-links { gap: 16px; font-size: 0.86em; }
 }
 @media (max-width: 520px) {
-    .topbar { padding-inline-end: 120px; }
     .topbar-links { gap: 12px; font-size: 0.82em; }
     .topbar-links a.topbar-changelog { display: none; }
 }
