@@ -1,6 +1,6 @@
 # ixsuper.github.io
 
-Personal portfolio and app landing pages for iOS developer **Ziyad Alsuhaymi**.
+Landing page for iOS apps and games by **Ziyad Alsuhaymi**.
 
 **Live site:** [https://ixsuper.github.io](https://ixsuper.github.io)
 
@@ -12,4 +12,4 @@ Personal portfolio and app landing pages for iOS developer **Ziyad Alsuhaymi**.
 
 ## About This Repo
 
-This repository hosts the main portfolio landing page as well as individual privacy policies, terms of use, and support pages for each app, ensuring App Store compliance.
+This repository hosts the main landing page in 25 languages and each app's own privacy policy, terms of use, and support pages for App Store compliance.
