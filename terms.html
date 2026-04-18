@@ -4,89 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Use - Color Number Match</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
-            background: #0f1128;
-            color: rgba(255,255,255,0.9);
-            line-height: 1.7;
-            padding: 40px 20px;
-        }
-        .container { max-width: 720px; margin: 0 auto; }
-        h1 { font-size: 2em; font-weight: 800; margin-bottom: 8px; color: #fff; }
-        .updated { color: rgba(255,255,255,0.5); margin-bottom: 32px; font-size: 0.9em; }
-        h3 { font-size: 1.2em; font-weight: 700; margin-top: 28px; margin-bottom: 12px; color: #7eb4ff; }
-        p, li { color: rgba(255,255,255,0.78); margin-bottom: 12px; }
-        ul { padding-left: 24px; margin-bottom: 16px; }
-        a { color: #3478f6; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .back { display: inline-block; margin-bottom: 24px; color: rgba(255,255,255,0.5); font-size: 0.9em; }
-    
-        /* ============ Language switcher (topbar flex child) ============ */
-        .lang-switcher {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 7px 12px 7px 12px;
-            background: var(--card-bg, rgba(12, 16, 38, 0.55));
-            border: 1px solid var(--border, rgba(255, 255, 255, 0.14));
-            border-radius: 100px;
-            color: var(--text, #fff);
-            font-size: 0.82em;
-            font-weight: 500;
-            flex-shrink: 0;
-            cursor: pointer;
-            transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
-        }
-        .lang-switcher:hover {
-            background: var(--card-bg-hover, rgba(20, 26, 54, 0.7));
-            border-color: rgba(255, 255, 255, 0.24);
-            transform: translateY(-1px);
-        }
-        .lang-switcher .lang-icon {
-            width: 15px;
-            height: 15px;
-            fill: currentColor;
-            opacity: 0.85;
-            flex-shrink: 0;
-        }
-        .lang-switcher .lang-caret {
-            width: 10px;
-            height: 10px;
-            fill: currentColor;
-            opacity: 0.65;
-            flex-shrink: 0;
-            pointer-events: none;
-        }
-        .lang-switcher select {
-            background: transparent;
-            border: none;
-            color: currentColor;
-            font: inherit;
-            cursor: pointer;
-            outline: none;
-            padding: 0;
-            margin: 0;
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            max-width: 130px;
-        }
-        .lang-switcher select::-ms-expand { display: none; }
-        .lang-switcher select option {
-            background: #0a0e22;
-            color: #fff;
-        }
-        @media (max-width: 720px) {
-            .lang-switcher { padding: 6px 10px; font-size: 0.78em; gap: 6px; }
-            .lang-switcher select { max-width: 90px; }
-        }
-        @media (max-width: 520px) {
-            .lang-switcher select { max-width: 0; padding: 0; }
-            .lang-switcher { padding: 6px 9px; }
-        }
-    </style>
+    <link rel="stylesheet" href="/assets/site.css">
     <meta name="theme-color" content="#070a1a" media="(prefers-color-scheme: dark)">
     <meta name="theme-color" content="#f5f6ff" media="(prefers-color-scheme: light)">
     <meta name="color-scheme" content="dark light">
@@ -118,7 +36,7 @@
 
     <link rel="canonical" href="https://ixsuper.github.io/terms.html">
 </head>
-<body>
+<body class="text-page">
     <nav class="topbar" aria-label="Primary">
         <a class="topbar-brand" href="/">
             <span class="topbar-mark" aria-hidden="true">Z</span>
@@ -210,6 +128,7 @@
         <p>If you have questions about these terms, contact us at:</p>
         <p><strong>Email:</strong> <a href="mailto:alsuhaymiziyad@gmail.com">alsuhaymiziyad@gmail.com</a></p>
     </div>
+    <script defer src="/assets/lang-switcher.js"></script>
     <script defer src="/assets/analytics.js"></script>
 </body>
 </html>

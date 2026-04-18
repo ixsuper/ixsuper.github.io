@@ -1,0 +1,42 @@
+Copyright © 2025–2026 Ziyad Alsuhaymi. All rights reserved.
+
+This repository hosts the source for the public website at
+https://ixsuper.github.io and the privacy / terms / support pages
+required by Apple's App Store for the apps shipped from this account.
+
+You may:
+  • View the source for educational purposes.
+  • Reference small snippets (under fair-use) with attribution.
+
+You may NOT, without prior written permission:
+  • Republish, mirror, or redistribute the site or its assets.
+  • Reuse the brand assets, app names, copy, screenshots, icons,
+    or design system in your own projects.
+  • Pass off any portion of this work as your own.
+
+The HTML/CSS/JS code itself (excluding brand assets, copy, and
+screenshots) is shared under the MIT License below for reference.
+
+----
+
+MIT License (code only — does not cover brand assets, app names,
+icons, screenshots, or copy)
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software (code only) to deal in the Software without
+restriction, including without limitation the rights to use, copy,
+modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished
+to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

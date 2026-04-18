@@ -1,0 +1,171 @@
+/* ============================================================
+   Shared stylesheet for utility pages (privacy, terms, 404).
+   Provides reset, topbar, language switcher, and text-page styling.
+   ============================================================ */
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    color-scheme: dark light;
+    --text: #e8ecf4;
+    --text-muted: rgba(255, 255, 255, 0.55);
+    --border: rgba(255, 255, 255, 0.1);
+    --border-hi: rgba(255, 255, 255, 0.2);
+    --card-bg: rgba(12, 16, 38, 0.55);
+}
+
+/* ============ Topbar (shared with home.css) ============ */
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 90;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 14px 28px;
+    padding-inline-end: 180px;
+    background: rgba(7, 10, 26, 0.6);
+    backdrop-filter: blur(22px) saturate(150%);
+    -webkit-backdrop-filter: blur(22px) saturate(150%);
+    border-bottom: 1px solid var(--border);
+}
+.topbar-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.96em;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+}
+.topbar-mark {
+    display: inline-grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    background: linear-gradient(135deg, #4f80ff, #7b5cff);
+    color: #fff;
+    font-weight: 900;
+    font-size: 0.9em;
+    box-shadow: 0 6px 18px rgba(123, 92, 255, 0.32);
+}
+.topbar-links {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+.topbar-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+}
+.topbar-links a:hover,
+.topbar-links a[aria-current="page"] {
+    color: var(--text);
+}
+@media (max-width: 720px) {
+    .topbar { padding: 10px 16px; padding-inline-end: 150px; gap: 12px; }
+    .topbar-name { display: none; }
+    .topbar-links { gap: 16px; font-size: 0.86em; }
+}
+@media (max-width: 520px) {
+    .topbar { padding-inline-end: 120px; }
+    .topbar-links { gap: 12px; font-size: 0.82em; }
+    .topbar-links a.topbar-changelog { display: none; }
+}
+
+/* ============ Text pages (privacy, terms) ============ */
+body.text-page {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+    background: #0f1128;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body.text-page .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+body.text-page h1 { font-size: 2em; font-weight: 800; margin-bottom: 8px; color: #fff; }
+body.text-page .updated { color: rgba(255, 255, 255, 0.5); margin-bottom: 32px; font-size: 0.9em; }
+body.text-page h3 { font-size: 1.2em; font-weight: 700; margin-top: 28px; margin-bottom: 12px; color: #7eb4ff; }
+body.text-page h4 { font-size: 1.05em; font-weight: 600; margin-top: 16px; margin-bottom: 8px; color: #a0c4ff; }
+body.text-page p,
+body.text-page li { color: rgba(255, 255, 255, 0.78); margin-bottom: 12px; }
+body.text-page ul { padding-left: 24px; margin-bottom: 16px; }
+body.text-page a { color: #3478f6; text-decoration: none; }
+body.text-page a:hover { text-decoration: underline; }
+body.text-page .back { display: inline-block; margin-bottom: 24px; color: rgba(255, 255, 255, 0.5); font-size: 0.9em; }
+
+/* ============ Language switcher (shared with home.css) ============ */
+.lang-switcher {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 12px 7px 12px;
+    background: var(--card-bg, rgba(12, 16, 38, 0.55));
+    border: 1px solid var(--border, rgba(255, 255, 255, 0.14));
+    border-radius: 100px;
+    color: var(--text, #fff);
+    font-size: 0.82em;
+    font-weight: 500;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+.lang-switcher:hover {
+    background: var(--card-bg-hover, rgba(20, 26, 54, 0.7));
+    border-color: rgba(255, 255, 255, 0.24);
+    transform: translateY(-1px);
+}
+.lang-switcher .lang-icon {
+    width: 15px;
+    height: 15px;
+    fill: currentColor;
+    opacity: 0.85;
+    flex-shrink: 0;
+}
+.lang-switcher .lang-caret {
+    width: 10px;
+    height: 10px;
+    fill: currentColor;
+    opacity: 0.65;
+    flex-shrink: 0;
+    pointer-events: none;
+}
+.lang-switcher select {
+    background: transparent;
+    border: none;
+    color: currentColor;
+    font: inherit;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    max-width: 130px;
+}
+.lang-switcher select::-ms-expand { display: none; }
+.lang-switcher select option {
+    background: #0a0e22;
+    color: #fff;
+}
+@media (max-width: 720px) {
+    .lang-switcher { padding: 6px 10px; font-size: 0.78em; gap: 6px; }
+    .lang-switcher select { max-width: 90px; }
+}
+@media (max-width: 520px) {
+    .lang-switcher select { max-width: 0; padding: 0; }
+    .lang-switcher { padding: 6px 9px; }
+}

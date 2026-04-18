@@ -6,7 +6,7 @@
     <!-- Homepage (English + 24 localized alternates) -->
     <url>
         <loc>https://ixsuper.github.io/</loc>
-        <lastmod>2026-04-11</lastmod>
+        <lastmod>2026-04-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://ixsuper.github.io/"/>
@@ -44,7 +44,7 @@
     <!-- Echoes -->
     <url>
         <loc>https://ixsuper.github.io/echoes/</loc>
-        <lastmod>2026-04-11</lastmod>
+        <lastmod>2026-04-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://ixsuper.github.io/echoes/"/>
@@ -80,19 +80,19 @@
     </url>
     <url>
         <loc>https://ixsuper.github.io/echoes/privacy</loc>
-        <lastmod>2026-04-11</lastmod>
+        <lastmod>2026-04-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
         <loc>https://ixsuper.github.io/echoes/terms</loc>
-        <lastmod>2026-04-11</lastmod>
+        <lastmod>2026-04-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
         <loc>https://ixsuper.github.io/echoes/support</loc>
-        <lastmod>2026-04-11</lastmod>
+        <lastmod>2026-04-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
@@ -100,7 +100,7 @@
     <!-- Block Blaster Puzzle -->
     <url>
         <loc>https://ixsuper.github.io/block-blaster/</loc>
-        <lastmod>2026-04-11</lastmod>
+        <lastmod>2026-04-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://ixsuper.github.io/block-blaster/"/>
@@ -136,19 +136,19 @@
     </url>
     <url>
         <loc>https://ixsuper.github.io/block-blaster/privacy</loc>
-        <lastmod>2026-04-11</lastmod>
+        <lastmod>2026-04-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
         <loc>https://ixsuper.github.io/block-blaster/terms</loc>
-        <lastmod>2026-04-11</lastmod>
+        <lastmod>2026-04-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
         <loc>https://ixsuper.github.io/block-blaster/support</loc>
-        <lastmod>2026-04-11</lastmod>
+        <lastmod>2026-04-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
@@ -156,7 +156,7 @@
     <!-- Color Number Match -->
     <url>
         <loc>https://ixsuper.github.io/colornumbermatch/</loc>
-        <lastmod>2026-04-11</lastmod>
+        <lastmod>2026-04-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://ixsuper.github.io/colornumbermatch/"/>
@@ -192,31 +192,31 @@
     </url>
     <url>
         <loc>https://ixsuper.github.io/colornumbermatch/support</loc>
-        <lastmod>2026-04-11</lastmod>
+        <lastmod>2026-04-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://ixsuper.github.io/colornumbermatch/changelog</loc>
-        <lastmod>2026-04-11</lastmod>
+        <lastmod>2026-04-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://ixsuper.github.io/colornumbermatch/feed.xml</loc>
-        <lastmod>2026-04-11</lastmod>
+        <lastmod>2026-04-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.4</priority>
     </url>
     <url>
         <loc>https://ixsuper.github.io/privacy</loc>
-        <lastmod>2026-04-11</lastmod>
+        <lastmod>2026-04-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
     <url>
         <loc>https://ixsuper.github.io/terms</loc>
-        <lastmod>2026-04-11</lastmod>
+        <lastmod>2026-04-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
