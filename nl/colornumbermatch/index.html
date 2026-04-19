@@ -93,141 +93,14 @@
     <link rel="preload" as="image" href="/assets/color-number-match-hero.webp" type="image/webp" fetchpriority="high">
 
     <link rel="stylesheet" href="/assets/app.css">
+    <link rel="stylesheet" href="/assets/lang-switcher.css">
     <style>
         :root {
             --accent-1: #8b5cf6;
             --accent-2: #ec4899;
             --accent-3: #38bdf8;
         }
-    
-        /* ============ Language switcher (topbar flex child) ============ */
-        .lang-switcher {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 7px 12px 7px 12px;
-            background: var(--card-bg, rgba(12, 16, 38, 0.55));
-            border: 1px solid var(--border, rgba(255, 255, 255, 0.14));
-            border-radius: 100px;
-            color: var(--text, #fff);
-            font-size: 0.82em;
-            font-weight: 500;
-            flex-shrink: 0;
-            cursor: pointer;
-            transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
-        }
-        .lang-switcher:hover {
-            background: var(--card-bg-hover, rgba(20, 26, 54, 0.7));
-            border-color: rgba(255, 255, 255, 0.24);
-            transform: translateY(-1px);
-        }
-        .lang-switcher .lang-icon {
-            width: 15px;
-            height: 15px;
-            fill: currentColor;
-            opacity: 0.85;
-            flex-shrink: 0;
-        }
-        .lang-switcher .lang-caret {
-            width: 10px;
-            height: 10px;
-            fill: currentColor;
-            opacity: 0.65;
-            flex-shrink: 0;
-            pointer-events: none;
-        }
-        .lang-switcher select {
-            background: transparent;
-            border: none;
-            color: currentColor;
-            font: inherit;
-            cursor: pointer;
-            outline: none;
-            padding: 0;
-            margin: 0;
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            max-width: 130px;
-        }
-        .lang-switcher select::-ms-expand { display: none; }
-        .lang-switcher select option {
-            background: #0a0e22;
-            color: #fff;
-        }
-        @media (max-width: 720px) {
-            .lang-switcher { padding: 6px 10px; font-size: 0.78em; gap: 6px; }
-            .lang-switcher select { max-width: 90px; }
-        }
-        @media (max-width: 520px) {
-            .lang-switcher select { max-width: 0; padding: 0; }
-            .lang-switcher { padding: 6px 9px; }
-        }
-    
-        /* ============ Language switcher (topbar flex child) ============ */
-        .lang-switcher {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 7px 12px 7px 12px;
-            background: var(--card-bg, rgba(12, 16, 38, 0.55));
-            border: 1px solid var(--border, rgba(255, 255, 255, 0.14));
-            border-radius: 100px;
-            color: var(--text, #fff);
-            font-size: 0.82em;
-            font-weight: 500;
-            flex-shrink: 0;
-            cursor: pointer;
-            transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
-        }
-        .lang-switcher:hover {
-            background: var(--card-bg-hover, rgba(20, 26, 54, 0.7));
-            border-color: rgba(255, 255, 255, 0.24);
-            transform: translateY(-1px);
-        }
-        .lang-switcher .lang-icon {
-            width: 15px;
-            height: 15px;
-            fill: currentColor;
-            opacity: 0.85;
-            flex-shrink: 0;
-        }
-        .lang-switcher .lang-caret {
-            width: 10px;
-            height: 10px;
-            fill: currentColor;
-            opacity: 0.65;
-            flex-shrink: 0;
-            pointer-events: none;
-        }
-        .lang-switcher select {
-            background: transparent;
-            border: none;
-            color: currentColor;
-            font: inherit;
-            cursor: pointer;
-            outline: none;
-            padding: 0;
-            margin: 0;
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            max-width: 130px;
-        }
-        .lang-switcher select::-ms-expand { display: none; }
-        .lang-switcher select option {
-            background: #0a0e22;
-            color: #fff;
-        }
-        @media (max-width: 720px) {
-            .lang-switcher { padding: 6px 10px; font-size: 0.78em; gap: 6px; }
-            .lang-switcher select { max-width: 90px; }
-        }
-        @media (max-width: 520px) {
-            .lang-switcher select { max-width: 0; padding: 0; }
-            .lang-switcher { padding: 6px 9px; }
-        }
-    </style>
+        </style>
 
     <script type="application/ld+json">
     {
@@ -318,7 +191,7 @@
         </nav>
 
         <header class="hero">
-            <span class="hero-badge live">v1.2 · Live on the App Store</span>
+            <span class="hero-badge live">v1.2.2 · Live on the App Store</span>
             <h1>Color Number Match</h1>
             <p class="tagline">Een levendig puzzelspel waarin je tegels koppelt op kleur, nummer of beide. 2000+ levels, speciale tegels, Metal-shader-effecten, CoreHaptics en volledige lokalisatie voor 24 talen inclusief Arabisch RTL.</p>
 
@@ -401,7 +274,7 @@
         </section>
 
         <section class="section">
-            <h2>What’s New in v1.2 — “Engagement Update”</h2>
+            <h2>What’s New in v1.2.2 — “Engagement Update”</h2>
             <ul>
                 <li><strong>Special Tiles</strong> &mdash; Bomb, Rainbow, and Frozen tiles woven into level generation.</li>
                 <li><strong>Metal Shader Effects</strong> &mdash; GPU-accelerated visuals with graceful fallback.</li>
