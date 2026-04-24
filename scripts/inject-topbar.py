@@ -51,7 +51,7 @@ def prefix_for(lang: str) -> str:
 
 def topbar_html(lang: str, current: str) -> str:
     """
-    current is one of: home, echoes, blocks, colors, other
+    current is one of: home, echoes, gameshelf, blocks, colors, other
     """
     p = prefix_for(lang)
     home_label = NAV["home"].get(lang, NAV["home"]["en"])
@@ -65,6 +65,7 @@ def topbar_html(lang: str, current: str) -> str:
     links = "\n".join([
         link(p,                                 home_label,        "home"),
         link(f"{p}echoes/",                     "Echoes",          "echoes"),
+        link(f"{p}gameshelf/",                  "GameShelf",       "gameshelf"),
         link(f"{p}block-blaster/",              "Block Blaster",   "blocks"),
         link(f"{p}colornumbermatch/",           "Color Match",     "colors"),
         link(f"{p}colornumbermatch/changelog",  changelog_label,   "changelog", "topbar-changelog"),
@@ -96,7 +97,7 @@ def detect_lang_from_path(rel_path: str) -> str:
 
 def detect_current_section(rel_path: str) -> str:
     """
-    Returns one of: home, echoes, blocks, colors, other
+    Returns one of: home, echoes, gameshelf, blocks, colors, other
     """
     parts = rel_path.split(os.sep)
     # Strip leading lang dir if present
@@ -109,6 +110,8 @@ def detect_current_section(rel_path: str) -> str:
         return "home"
     if head == "echoes":
         return "echoes"
+    if head == "gameshelf":
+        return "gameshelf"
     if head == "block-blaster":
         return "blocks"
     if head == "colornumbermatch":

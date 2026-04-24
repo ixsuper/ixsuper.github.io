@@ -97,6 +97,32 @@
         <priority>0.5</priority>
     </url>
 
+    <!-- GameShelf -->
+    <url>
+        <loc>https://ixsuper.github.io/gameshelf/</loc>
+        <lastmod>2026-04-24</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://ixsuper.github.io/gameshelf/privacy</loc>
+        <lastmod>2026-04-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://ixsuper.github.io/gameshelf/terms</loc>
+        <lastmod>2026-04-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://ixsuper.github.io/gameshelf/support</loc>
+        <lastmod>2026-04-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+
     <!-- Block Blaster Puzzle -->
     <url>
         <loc>https://ixsuper.github.io/block-blaster/</loc>

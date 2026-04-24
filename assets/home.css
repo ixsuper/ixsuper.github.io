@@ -447,6 +447,26 @@ body {
     to { transform: rotate(360deg); }
 }
 
+/* GameShelf theme: violet + cyan + pink */
+.graphic.gameshelf .graphic-art {
+    background:
+        radial-gradient(circle at 25% 30%, rgba(124, 92, 255, 0.65), transparent 55%),
+        radial-gradient(circle at 75% 75%, rgba(54, 197, 240, 0.5), transparent 55%),
+        radial-gradient(circle at 55% 45%, rgba(255, 77, 139, 0.35), transparent 60%),
+        linear-gradient(135deg, #14102e 0%, #0c1230 50%, #0a0a1f 100%);
+}
+.graphic.gameshelf .graphic-art::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(124,92,255,0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(54,197,240,0.08) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse at center, #000 25%, transparent 72%);
+    -webkit-mask-image: radial-gradient(ellipse at center, #000 25%, transparent 72%);
+}
+
 /* ============ Info column (floating glass panel) ============ */
 .info {
     position: relative;
