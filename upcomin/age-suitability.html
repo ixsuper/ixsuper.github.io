@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Suitability — Upcomin'</title>
+    <link rel="stylesheet" href="/assets/site.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+            background: #0a0a1a;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.7;
+            padding: 40px 20px;
+        }
+        .container { max-width: 720px; margin: 0 auto; }
+        h1 { font-size: 2em; font-weight: 800; margin-bottom: 8px; color: #fff; }
+        .updated { color: rgba(255,255,255,0.5); margin-bottom: 32px; font-size: 0.9em; }
+        h3 { font-size: 1.2em; font-weight: 700; margin-top: 28px; margin-bottom: 12px; color: #7c5cff; }
+        p, li { color: rgba(255,255,255,0.78); margin-bottom: 12px; }
+        ul { padding-left: 24px; margin-bottom: 16px; }
+        a { color: #7c5cff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .back { display: inline-block; margin-bottom: 24px; color: rgba(255,255,255,0.5); font-size: 0.9em; }
+        .rating-pill {
+            display: inline-block;
+            background: linear-gradient(135deg, #7c5cff, #36c5f0);
+            color: #fff;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 0.95em;
+            margin: 8px 0 16px;
+        }
+        .source-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin: 16px 0 24px;
+        }
+        .source-card {
+            background: rgba(124, 92, 255, 0.08);
+            border: 1px solid rgba(124, 92, 255, 0.18);
+            border-radius: 10px;
+            padding: 14px 18px;
+        }
+        .source-card strong { color: #fff; display: block; margin-bottom: 4px; }
+        .source-card span { color: rgba(255,255,255,0.65); font-size: 0.9em; }
+    </style>
+    <meta name="theme-color" content="#0a0a1a" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f5f6ff" media="(prefers-color-scheme: light)">
+    <meta name="color-scheme" content="dark light">
+
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <meta property="og:title" content="Age Suitability — Upcomin'">
+    <meta property="og:description" content="Why Upcomin' is rated 12+ and how we moderate third-party content.">
+    <meta property="og:url" content="https://ixsuper.github.io/upcomin/age-suitability">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ziyad Alsuhaymi">
+    <link rel="canonical" href="https://ixsuper.github.io/upcomin/age-suitability">
+</head>
+<body>
+    <nav class="topbar" aria-label="Primary">
+        <a class="topbar-brand" href="/">
+            <span class="topbar-mark" aria-hidden="true">Z</span>
+            <span class="topbar-name">Ziyad Alsuhaymi</span>
+        </a>
+        <div class="topbar-links">
+            <a href="/">Home</a>
+            <a href="/echoes/">Echoes</a>
+            <a href="/upcomin/" aria-current="page">Upcomin'</a>
+            <a href="/block-blaster/">Block Blaster</a>
+            <a href="/colornumbermatch/">Color Match</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <a href="/upcomin/" class="back">&larr; Back to Upcomin'</a>
+        <h1>Upcomin' Age Suitability</h1>
+        <p class="updated">Last Updated: April 25, 2026</p>
+
+        <div class="rating-pill">Rated 12+</div>
+
+        <p>Upcomin' is rated <strong>12+</strong>. The app itself contains no violence, no sexual content, no profanity, and no real-world depictions of any sensitive topic. Every rating-relevant element comes from third-party metadata that Upcomin' surfaces about games, movies, and TV shows users want to track.</p>
+
+        <h3>Why 12+ and not 4+</h3>
+        <p>Upcomin' is a release tracker, not a children's app. Users browse and follow upcoming and released media — including titles whose own content rating is Mature (PEGI 18, ESRB M, MPAA R, TV-MA). The app displays only the metadata for those titles — title text, cover art, release dates, age ratings — never their actual gameplay, video, or interactive content. Even so, mature cover art and titles can appear in search results and in a user's tracked list. We've selected 12+ because:</p>
+        <ul>
+            <li>A 12-year-old can be expected to encounter and contextualize covers of M-rated games or R-rated films without the experience being unsuitable.</li>
+            <li>Below 12+ understates this. Above 12+ (such as 17+) overstates it — there is no in-app violence, no in-app sexual content, no streaming, no playable game.</li>
+        </ul>
+
+        <h3>Why 12+ and not 17+</h3>
+        <p>Apple's 17+ tier is reserved for apps with frequent or intense mature themes inside the app, unrestricted web access, or unmoderated user-to-user communication. Upcomin' has none of these:</p>
+        <ul>
+            <li>No depictions of violence, sex, drug use, or other mature content within the app itself.</li>
+            <li>No free-form web browser. External links open <em>specific</em> pages on Reddit, IGDB, YouTube, or storefronts — not arbitrary URLs.</li>
+            <li>No user-to-user messaging or chat. Read-only views of public Reddit posts are the only third-party content surface.</li>
+        </ul>
+
+        <h3>Third-Party Content Sources and Moderation</h3>
+
+        <div class="source-grid">
+            <div class="source-card">
+                <strong>Game, Movie &amp; TV Metadata (IGDB, TMDB)</strong>
+                <span>Title, cover art, genre, age rating, and release date. Some titles are themselves rated Mature; their cover art may be intense. We display the source's age-rating label alongside the title so users see context.</span>
+            </div>
+            <div class="source-card">
+                <strong>Reddit Discussion (Pulse Tab)</strong>
+                <span>Top community posts for tracked games. Two automatic protections apply before a post becomes visible: (1) Reddit's NSFW/spoiler flags trigger a blur-and-tap-to-reveal overlay; (2) a global Spoiler Shield setting (off by default) blurs every post regardless of flag. Posts marked NSFW by Reddit moderators are blurred even when the user has Spoiler Shield disabled.</span>
+            </div>
+            <div class="source-card">
+                <strong>Trailers (YouTube)</strong>
+                <span>Embedded via the official YouTube iframe player. Trailer content rating is set by YouTube and the uploader. Restricted Mode honors the device's parental controls.</span>
+            </div>
+            <div class="source-card">
+                <strong>Live Streams (Twitch)</strong>
+                <span>Listings of public streams playing tracked games right now. Tapping a stream opens it in the Twitch app or web player — Twitch's own age gates and content rules apply at that point.</span>
+            </div>
+            <div class="source-card">
+                <strong>News Headlines</strong>
+                <span>Aggregated game-industry headlines from established outlets (no UGC blogs). Tapping a headline opens the source's article in Safari View Controller.</span>
+            </div>
+            <div class="source-card">
+                <strong>Advertising (Google AdMob)</strong>
+                <span>Banner ads at the bottom of most tabs. Google AdMob's content filtering and content rating policies apply — we use AdMob's default content filter, which excludes strong profanity, sexual content, and graphic violence.</span>
+            </div>
+        </div>
+
+        <h3>What Users Can and Cannot Do</h3>
+        <ul>
+            <li><strong>Cannot</strong> create posts, comments, profiles, messages, or any user-to-user communication.</li>
+            <li><strong>Cannot</strong> upload images, audio, or video.</li>
+            <li><strong>Cannot</strong> purchase or stream the games, movies, or shows being tracked. Upcomin' is a metadata viewer, not a marketplace or media player.</li>
+            <li><strong>Can</strong> follow public games and tap through to public storefronts (Steam, App Store) or Reddit threads, where the destination service's own age and content policies apply.</li>
+        </ul>
+
+        <h3>Pro and In-App Purchase</h3>
+        <p>Upcomin' Pro is an optional one-time purchase that removes ads and unlocks unlimited tracking. Apple StoreKit handles all payment. No content within Pro changes the app's age suitability.</p>
+
+        <h3>Reporting Concerns</h3>
+        <p>If you encounter content in Upcomin' that you believe is inappropriate for the 12+ rating, please email <a href="mailto:alsuhaymiziyad@gmail.com?subject=Upcomin'%20Content%20Concern">alsuhaymiziyad@gmail.com</a>. We respond personally and treat moderation feedback as a top priority.</p>
+    </div>
+    <script defer src="/assets/analytics.js"></script>
+</body>
+</html>
