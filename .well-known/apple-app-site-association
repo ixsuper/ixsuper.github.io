@@ -1,0 +1,27 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["K652TWF4SQ.com.ziyad.GameShelf"],
+        "components": [
+          {
+            "/": "/upcomin",
+            "comment": "Match Upcomin' deep links"
+          },
+          {
+            "/": "/upcomin/*",
+            "comment": "Match Upcomin' deep links with subpaths"
+          },
+          {
+            "/": "/share/upcomin/*",
+            "comment": "Match shared list links"
+          }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["K652TWF4SQ.com.ziyad.GameShelf"]
+  }
+}
