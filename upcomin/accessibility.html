@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility — Upcomin'</title>
+    <link rel="stylesheet" href="/assets/site.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', sans-serif;
+            background: #0a0a1a;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.7;
+            padding: 40px 20px;
+        }
+        .container { max-width: 720px; margin: 0 auto; }
+        h1 { font-size: 2em; font-weight: 800; margin-bottom: 8px; color: #fff; }
+        .updated { color: rgba(255,255,255,0.5); margin-bottom: 32px; font-size: 0.9em; }
+        h3 { font-size: 1.2em; font-weight: 700; margin-top: 28px; margin-bottom: 12px; color: #7c5cff; }
+        h4 { font-size: 1.05em; font-weight: 600; margin-top: 16px; margin-bottom: 8px; color: #36c5f0; }
+        p, li { color: rgba(255,255,255,0.78); margin-bottom: 12px; }
+        ul { padding-left: 24px; margin-bottom: 16px; }
+        a { color: #7c5cff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .back { display: inline-block; margin-bottom: 24px; color: rgba(255,255,255,0.5); font-size: 0.9em; }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin: 24px 0 32px;
+        }
+        .feature-card {
+            background: rgba(124, 92, 255, 0.08);
+            border: 1px solid rgba(124, 92, 255, 0.18);
+            border-radius: 12px;
+            padding: 16px;
+        }
+        .feature-card strong {
+            color: #fff;
+            display: block;
+            margin-bottom: 4px;
+            font-size: 0.95em;
+        }
+        .feature-card span {
+            color: rgba(255,255,255,0.65);
+            font-size: 0.85em;
+            line-height: 1.5;
+        }
+    </style>
+    <meta name="theme-color" content="#0a0a1a" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f5f6ff" media="(prefers-color-scheme: light)">
+    <meta name="color-scheme" content="dark light">
+
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <meta property="og:title" content="Accessibility — Upcomin'">
+    <meta property="og:description" content="How Upcomin' supports VoiceOver, Dynamic Type, Dark Mode, Reduced Motion, and other iOS accessibility features.">
+    <meta property="og:url" content="https://ixsuper.github.io/upcomin/accessibility">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ziyad Alsuhaymi">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@thesuper_hunter">
+    <meta name="twitter:creator" content="@thesuper_hunter">
+    <link rel="canonical" href="https://ixsuper.github.io/upcomin/accessibility">
+</head>
+<body>
+    <nav class="topbar" aria-label="Primary">
+        <a class="topbar-brand" href="/">
+            <span class="topbar-mark" aria-hidden="true">Z</span>
+            <span class="topbar-name">Ziyad Alsuhaymi</span>
+        </a>
+        <div class="topbar-links">
+            <a href="/">Home</a>
+            <a href="/echoes/">Echoes</a>
+            <a href="/upcomin/" aria-current="page">Upcomin'</a>
+            <a href="/block-blaster/">Block Blaster</a>
+            <a href="/colornumbermatch/">Color Match</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <a href="/upcomin/" class="back">&larr; Back to Upcomin'</a>
+        <h1>Upcomin' Accessibility</h1>
+        <p class="updated">Last Updated: April 25, 2026</p>
+
+        <p>Upcomin' is built on SwiftUI for iOS 26, which gives every standard control native support for Apple's accessibility technologies. We've designed the app so the most common workflows — discovering games, tracking releases, generating guides — work for users who rely on VoiceOver, Dynamic Type, Dark Mode, and other assistive features.</p>
+
+        <h3>Supported Features on iPhone</h3>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <strong>VoiceOver</strong>
+                <span>Every interactive control is labeled. Navigate the app entirely by swiping and double-tapping.</span>
+            </div>
+            <div class="feature-card">
+                <strong>Voice Control</strong>
+                <span>Tap any control by name. Numbered overlay mode is supported for purely visual elements.</span>
+            </div>
+            <div class="feature-card">
+                <strong>Larger Text</strong>
+                <span>Body text and headlines scale with the system Dynamic Type setting up to the AX5 size.</span>
+            </div>
+            <div class="feature-card">
+                <strong>Dark Interface</strong>
+                <span>Full dark theme with three modes: System, Light, Dark. Choose under Settings &rsaquo; Theme.</span>
+            </div>
+            <div class="feature-card">
+                <strong>Sufficient Contrast</strong>
+                <span>Built on Apple's semantic color palette, which meets WCAG AA contrast standards in both light and dark modes.</span>
+            </div>
+            <div class="feature-card">
+                <strong>Differentiate Without Color Alone</strong>
+                <span>Status (released, upcoming, on sale) is conveyed by icon and text together — never by color alone.</span>
+            </div>
+            <div class="feature-card">
+                <strong>Reduced Motion</strong>
+                <span>Animations and transitions automatically simplify when Reduce Motion is enabled in iOS Settings.</span>
+            </div>
+        </div>
+
+        <h3>Designing for Everyone</h3>
+        <p>Upcomin' uses Apple's standard SwiftUI components throughout. That choice is deliberate: it means VoiceOver, Voice Control, Switch Control, Full Keyboard Access, and other assistive technologies work the way iOS users expect, without re-learning a custom interface. We avoid color-only signals, hardcoded fonts in body content, and motion that ignores system preferences.</p>
+
+        <h3>Known Limitations</h3>
+        <p>We're transparent about where we can do better:</p>
+        <ul>
+            <li>Some decorative hero numerals (e.g., the large "200K" callouts in the Year-in-Review share card) use fixed font sizes for visual layout. The body content of these screens still scales.</li>
+            <li>Cover art and screenshots in game detail pages are images. We rely on the game's title and metadata text — adjacent to the image — to convey meaning to VoiceOver users.</li>
+            <li>Embedded YouTube trailers display whatever caption support YouTube provides for that video. Caption availability varies by uploader.</li>
+        </ul>
+
+        <h3>Reporting an Accessibility Issue</h3>
+        <p>If something doesn't work for you, we want to fix it. Please email <a href="mailto:alsuhaymiziyad@gmail.com?subject=Upcomin'%20Accessibility">alsuhaymiziyad@gmail.com</a> with the screen, the assistive technology you were using, and what you expected to happen. We respond personally and prioritize accessibility fixes in every release.</p>
+
+        <h3>Apple Accessibility Resources</h3>
+        <ul>
+            <li><a href="https://www.apple.com/accessibility/" target="_blank" rel="noopener">Apple Accessibility (Overview)</a></li>
+            <li><a href="https://support.apple.com/guide/iphone/turn-on-and-practice-voiceover-iph3e2e415f/ios" target="_blank" rel="noopener">Turn on VoiceOver</a></li>
+            <li><a href="https://support.apple.com/guide/iphone/change-the-text-size-iphd6804be59/ios" target="_blank" rel="noopener">Change Text Size and Boldness</a></li>
+            <li><a href="https://support.apple.com/guide/iphone/reduce-motion-iph7f9d8d2cf/ios" target="_blank" rel="noopener">Reduce Motion</a></li>
+        </ul>
+    </div>
+    <script defer src="/assets/analytics.js"></script>
+</body>
+</html>

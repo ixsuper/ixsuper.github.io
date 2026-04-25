@@ -122,6 +122,12 @@
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
+    <url>
+        <loc>https://ixsuper.github.io/upcomin/accessibility</loc>
+        <lastmod>2026-04-25</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.3</priority>
+    </url>
 
     <!-- Block Blaster Puzzle -->
     <url>
