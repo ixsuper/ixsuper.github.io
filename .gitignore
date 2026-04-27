@@ -11,3 +11,6 @@
 
 # Local previews
 node_modules/
+
+# WIP / out-of-tree sources
+ignite-source/
