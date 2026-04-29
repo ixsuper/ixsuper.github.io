@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Tempo Focus</title>
+    <meta name="description" content="How Tempo Focus handles your data. Short version: nothing leaves your device except optional AI coach prompts to Gemini.">
+    <meta name="theme-color" content="#0a1628" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#eef4ff" media="(prefers-color-scheme: light)">
+    <meta name="color-scheme" content="dark light">
+
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+    <link rel="canonical" href="https://ixsuper.github.io/tempo-focus/privacy/">
+
+    <link rel="stylesheet" href="/assets/app.css">
+    <link rel="stylesheet" href="/assets/lang-switcher.css">
+</head>
+<body>
+    <nav class="topbar" aria-label="Primary">
+        <a class="topbar-brand" href="/">
+            <span class="topbar-mark" aria-hidden="true">Z</span>
+            <span class="topbar-name">Ziyad Alsuhaymi</span>
+        </a>
+        <div class="topbar-links">
+            <a href="/">Home</a>
+            <a href="/tempo-focus/">Tempo Focus</a>
+        </div>
+    </nav>
+
+    <div class="bg-stage" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <div class="container">
+        <nav class="nav">
+            <a href="/tempo-focus/">&larr; Tempo Focus</a>
+            <a href="mailto:alsuhaymiziyad@gmail.com">Contact</a>
+        </nav>
+
+        <header class="hero" style="text-align: left;">
+            <h1>Privacy Policy</h1>
+            <p class="tagline">Last updated: April 29, 2026</p>
+        </header>
+
+        <section class="section">
+            <h2>The short version</h2>
+            <p>Tempo Focus stores your sessions, achievements, and schedules on your device and in your private iCloud database. There are no third-party analytics, no advertising SDKs, and no tracking. The only outbound network call is the optional AI coach feature, which sends the task you type to Google's Gemini API.</p>
+        </section>
+
+        <section class="section">
+            <h2>Data we collect</h2>
+            <ul>
+                <li><strong>Focus sessions</strong> &mdash; date, duration, category, completion status. Stored on your device and synced to your private iCloud database via CloudKit.</li>
+                <li><strong>Achievements &amp; streaks</strong> &mdash; computed from your sessions. Stored alongside.</li>
+                <li><strong>Blocking schedules</strong> &mdash; the hours and days you set. Stored alongside.</li>
+                <li><strong>Preferences</strong> &mdash; daily goal, theme, name, haptics and notifications toggles. Stored in iOS UserDefaults.</li>
+                <li><strong>App selection for blocking</strong> &mdash; the apps and websites you pick. Stored as opaque tokens by Apple's Family Controls. We never see the underlying app names.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Data we do not collect</h2>
+            <ul>
+                <li>No identifiers (no advertising ID, no IDFV, no email, no account).</li>
+                <li>No analytics or telemetry.</li>
+                <li>No crash reports beyond Apple's own opt-in system reports.</li>
+                <li>No location data.</li>
+                <li>No contacts, photos, or microphone access.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>The AI coach</h2>
+            <p>If you tap the wand to break down a task or request a focus tip, Tempo Focus sends the task description (or a generic prompt) to Google's Gemini API. We do not attach any user identifier. Google's Gemini handling is governed by their <a href="https://ai.google.dev/gemini-api/terms" style="color: var(--accent-1);">API terms</a> and <a href="https://policies.google.com/privacy" style="color: var(--accent-1);">privacy policy</a>.</p>
+            <p>If you don't use the AI coach, no network call is made. A free quotes API is used as a fallback when Gemini is unavailable; only a generic request is sent, no user content.</p>
+        </section>
+
+        <section class="section">
+            <h2>Apple Screen Time &amp; Family Controls</h2>
+            <p>Tempo Focus uses Apple's <strong>Family Controls</strong> framework to apply blocking shields to apps you select. Apple keeps the actual app identities private; the app receives only opaque tokens. <strong>DeviceActivity</strong> applies your schedules in the background. None of this data leaves your device.</p>
+        </section>
+
+        <section class="section">
+            <h2>iCloud sync</h2>
+            <p>Your sessions and achievements are stored in your <em>private</em> CloudKit database, accessible only to you, signed in with your Apple ID. No one else, including the developer, can read this data. Disabling iCloud in iOS Settings stops sync; data remains local.</p>
+        </section>
+
+        <section class="section">
+            <h2>Data retention &amp; export</h2>
+            <p>You can export every session and achievement as JSON or CSV from Settings &rarr; Data. You can also wipe everything with one tap (Settings &rarr; Data &rarr; Reset all data). When you delete the app, locally stored data is removed by iOS; CloudKit data is removed when you sign out of iCloud or wipe the iCloud container.</p>
+        </section>
+
+        <section class="section">
+            <h2>Children</h2>
+            <p>Tempo Focus is not directed at children under 13. We don't knowingly collect data from anyone, including children.</p>
+        </section>
+
+        <section class="section">
+            <h2>Changes</h2>
+            <p>If this policy changes, we'll update the "Last updated" date at the top. Substantive changes will be flagged in release notes.</p>
+        </section>
+
+        <section class="section">
+            <h2>Contact</h2>
+            <p>Questions about privacy: <a href="mailto:alsuhaymiziyad@gmail.com" style="color: var(--accent-1);">alsuhaymiziyad@gmail.com</a></p>
+        </section>
+
+        <footer class="site-footer">
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/tempo-focus/">Learn More</a>
+                <a href="/tempo-focus/privacy">Privacy Policy</a>
+                <a href="/tempo-focus/terms">Terms of Use</a>
+                <a href="/tempo-focus/support">Support</a>
+                <a href="mailto:alsuhaymiziyad@gmail.com">Contact</a>
+            </div>
+            <p class="copyright">&copy; 2025&ndash;2026 Ziyad Alsuhaymi. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
