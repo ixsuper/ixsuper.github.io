@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy — Tempo Focus</title>
-    <meta name="description" content="How Tempo Focus handles your data. Short version: nothing leaves your device except optional AI coach prompts to Gemini.">
+    <meta name="description" content="How Tempo Focus handles your data. Short version: everything stays on your device. The AI coach uses on-device Apple Intelligence.">
     <meta name="theme-color" content="#0a1628" media="(prefers-color-scheme: dark)">
     <meta name="theme-color" content="#eef4ff" media="(prefers-color-scheme: light)">
     <meta name="color-scheme" content="dark light">
@@ -43,12 +43,12 @@
 
         <header class="hero" style="text-align: left;">
             <h1>Privacy Policy</h1>
-            <p class="tagline">Last updated: April 29, 2026</p>
+            <p class="tagline">Last updated: April 30, 2026</p>
         </header>
 
         <section class="section">
             <h2>The short version</h2>
-            <p>Tempo Focus stores your sessions, achievements, and schedules on your device and in your private iCloud database. There are no third-party analytics, no advertising SDKs, and no tracking. The only outbound network call is the optional AI coach feature, which sends the task you type to Google's Gemini API.</p>
+            <p>Tempo Focus stores your sessions, achievements, and schedules on your device and in your private iCloud database. The AI coach runs entirely on-device using Apple Intelligence — nothing you type ever leaves your iPhone. No analytics, no advertising SDKs, no tracking, no third-party API calls.</p>
         </section>
 
         <section class="section">
@@ -75,8 +75,8 @@
 
         <section class="section">
             <h2>The AI coach</h2>
-            <p>If you tap the wand to break down a task or request a focus tip, Tempo Focus sends the task description (or a generic prompt) to Google's Gemini API. We do not attach any user identifier. Google's Gemini handling is governed by their <a href="https://ai.google.dev/gemini-api/terms" style="color: var(--accent-1);">API terms</a> and <a href="https://policies.google.com/privacy" style="color: var(--accent-1);">privacy policy</a>.</p>
-            <p>If you don't use the AI coach, no network call is made. A free quotes API is used as a fallback when Gemini is unavailable; only a generic request is sent, no user content.</p>
+            <p>The AI coach uses Apple's on-device <strong>Foundation Models</strong> framework, part of Apple Intelligence. When you tap the wand to break down a task or request a focus tip, the request runs entirely on your iPhone. Your task descriptions, prompts, and the model's replies never leave the device. There is no server, no API key, no third-party LLM provider, and no network call.</p>
+            <p>If your device doesn't support Apple Intelligence, the AI coach falls back to a generic 3-step template (no network call) for task breakdowns, and an external quotes API for inspirational tips. The quotes API is called without any user-provided content or identifier.</p>
         </section>
 
         <section class="section">
