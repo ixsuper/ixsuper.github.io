@@ -8,7 +8,9 @@ Landing page for iOS apps and games by **Ziyad Alsuhaymi**.
 
 - **Color Number Match** -- A vibrant number/color matching puzzle game. [Download on the App Store](https://apps.apple.com/app/id6761441678).
 - **Block Blaster Puzzle** -- A satisfying block puzzle game with explosive combos, sensory themes, and haptic feedback. [Download on the App Store](https://apps.apple.com/app/id6761656702).
+- **Upcomin'** -- Track every upcoming release — games, movies, TV, anime — in one bright iOS 26 app. [Download on the App Store](https://apps.apple.com/app/id6763668182).
 - **Echoes: Echoes of the City** -- Capture living memories with photo, ambient sound, weather, and location. Built for iOS 26. *Coming soon.*
+- **Tempo Focus** -- A serious productivity tool with Pomodoro cycles, real app blocking via Screen Time, and an AI coach. *Coming soon.*
 
 ## About This Repo
 
