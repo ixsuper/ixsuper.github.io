@@ -571,7 +571,7 @@ REPLACEMENTS = [
     ("hero_title_html",      '<h1 class="hero-title">Hi, I\'m <span class="hero-name">Ziyad</span>.<br>I build premium <span class="hero-grad">iOS apps</span>.</h1>',
                              lambda t: f'<h1 class="hero-title">{t["hero_title_html"]}</h1>'),
     # Hero bio paragraph
-    ("hero_bio",             '<p class="hero-bio">Independent iOS developer building apps and games end-to-end. One app on the App Store, two more on the way, and a long list of small details I refuse to ship without.</p>',
+    ("hero_bio",             '<p class="hero-bio">Independent iOS developer building apps and games end-to-end. Three apps on the App Store, two more on the way, and a long list of small details I refuse to ship without.</p>',
                              lambda t: f'<p class="hero-bio">{t["hero_bio"]}</p>'),
     # Hero CTAs
     ("hero_cta_view",        'hero-btn-primary">\n                    View work\n                    <svg',
@@ -594,7 +594,7 @@ REPLACEMENTS = [
     # Featured Work section header
     ("work_eyebrow",         '<div class="section-eyebrow">Featured Work</div>',
                              lambda t: f'<div class="section-eyebrow">{t["work_eyebrow"]}</div>'),
-    ("work_title",           '<h2 class="section-title">Three apps. One obsession with polish.</h2>',
+    ("work_title",           '<h2 class="section-title">Five apps. One obsession with polish.</h2>',
                              lambda t: f'<h2 class="section-title">{t["work_title"]}</h2>'),
 
     # About section
